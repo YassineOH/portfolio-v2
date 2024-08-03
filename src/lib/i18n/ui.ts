@@ -17,3 +17,5 @@ export const ui = {
     'nav.projects': 'مشاريع',
   },
 } as const;
+
+export type UILang = typeof ui;

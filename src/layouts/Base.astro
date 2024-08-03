@@ -1,4 +1,5 @@
 ---
+import Header from '~/components/Header.astro';
 import '../styles/index.css';
 import { getLangFromUrl } from '~/lib/i18n';
 
@@ -13,7 +14,8 @@ const lang = getLangFromUrl(Astro.url);
     <meta name='generator' content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class='font-base'>
+  <body class='bg-background font-base text-text'>
+    <Header />
     <slot />
   </body>
 </html>

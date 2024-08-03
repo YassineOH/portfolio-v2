@@ -1,0 +1,46 @@
+---
+import { getLangFromUrl, useTranslation } from '~/lib/i18n';
+import { ui, type UILang } from '~/lib/i18n/ui';
+
+type Link = { label: keyof UILang['ar' | 'en']; pathname: string };
+const links: Link[] = [
+  { label: 'nav.home', pathname: '/' },
+  { label: 'nav.about', pathname: '/about' },
+  { label: 'nav.projects', pathname: '/projects' },
+];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
+const { pathname } = Astro.url;
+console.log(pathname);
+---
+
+<header
+  class='flex h-screen w-screen items-center justify-center shadow-sm lg:h-auto'
+>
+  <ul
+    class='flex flex-col items-center justify-center gap-x-14 py-4 lg:flex-row'
+  >
+    {
+      links.map((l) => (
+        <li>
+          <a
+            href={`/${lang}${l.pathname}`}
+            class:list={[
+              'px-4 py-2 text-lg font-semibold capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm',
+              {
+                'rounded-full bg-primary text-background opacity-100':
+                  pathname == `/${lang}${l.pathname}`,
+              },
+            ]}
+          >
+            {t(l.label)}{' '}
+          </a>
+        </li>
+      ))
+    }
+    <ul class='flex items-center justify-center gap-x-4'>
+      <li>T</li>
+      <li>L</li>
+    </ul>
+  </ul>
+</header>
