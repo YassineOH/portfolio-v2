@@ -1,8 +1,11 @@
 ---
 import '../styles/index.css';
+import { getLangFromUrl } from '~/lib/i18n';
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang='en'>
+<html lang={lang} dir={lang == 'ar' ? 'rtl' : 'ltr'}>
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
