@@ -13,7 +13,6 @@ const links: Link[] = [
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslation(lang);
 const { pathname } = Astro.url;
-console.log(pathname);
 ---
 
 <header
@@ -31,9 +30,7 @@ console.log(pathname);
               'px-4 py-2 text-lg font-semibold capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm',
               {
                 'rounded-full bg-primary text-background opacity-[1]':
-                  pathname.endsWith('/')
-                    ? pathname
-                    : pathname + '/' === `/${lang}${l.pathname}`,
+                  pathname === `/${lang}${l.pathname}`,
               },
             ]}
           >
