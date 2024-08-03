@@ -10,6 +10,10 @@ export default {
 				'primary': 'var(--primary)',
 				'secondary': 'var(--secondary)',
 				'accent': 'var(--accent)',
+			},
+			fontFamily: {
+				base: 'var(--base)',
+				headings: 'var(--headings)'
 			}
 		},
 	},

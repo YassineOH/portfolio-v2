@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Zain:wght@200;300;400;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +11,8 @@
         --primary: #b9804b;
         --secondary: #2f75c1;
         --accent: #69b5dd;
+        --base: 'Inter', sans-serif;
+        --headings: "Playfair Display", serif;
     }
 
     .dark {
@@ -17,5 +21,13 @@
         --primary: #b47b46;
         --secondary: #3e85d0;
         --accent: #226d96;
+    }
+
+
+    /* :lang(en) {} */
+
+    :lang(ar) {
+        --base: "Zain", sans-serif;
+        --headings: "Fustat", sans-serif;
     }
 }
