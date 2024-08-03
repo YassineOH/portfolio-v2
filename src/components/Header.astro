@@ -19,7 +19,7 @@ const { pathname } = Astro.url;
   class='flex h-screen w-screen items-center justify-center shadow-sm lg:h-auto'
 >
   <ul
-    class='flex flex-col items-center justify-center gap-x-14 py-4 lg:flex-row'
+    class='flex flex-col items-center justify-center gap-x-14 gap-y-8 py-4 lg:flex-row'
   >
     {
       links.map((l) => (
@@ -27,9 +27,9 @@ const { pathname } = Astro.url;
           <a
             href={`/${lang}${l.pathname}`}
             class:list={[
-              'px-4 py-2 text-lg font-semibold capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm',
+              'px-4 py-2 text-base font-normal capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm lg:font-semibold',
               {
-                'rounded-full bg-primary text-background opacity-[1]':
+                'rounded-full bg-primary font-bold text-background opacity-[1]':
                   pathname === `/${lang}${l.pathname}`,
               },
             ]}
@@ -39,6 +39,7 @@ const { pathname } = Astro.url;
         </li>
       ))
     }
+    <div class='h-1 w-48 rounded-full bg-secondary lg:h-6 lg:w-1'></div>
     <ul class='flex items-center justify-center gap-x-6'>
       <li>
         <ToggleTheme />
