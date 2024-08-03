@@ -1,0 +1,37 @@
+---
+import { getLangFromUrl } from '~/lib/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<div class='relative'>
+  <button
+    id='btn-theme'
+    class='flex items-center justify-center rounded-full border border-text p-3 transition-colors duration-300 hover:bg-black/10 dark:hover:bg-gray-100/10'
+  >
+    <span class='text-xs'>{lang === 'ar' ? 'ض' : 'En'}</span>
+  </button>
+  <ul
+    class='absolute top-11 z-50 flex flex-col gap-y-2 rounded-lg border border-text bg-background py-4'
+  >
+    <li>
+      <a
+        href='/ar'
+        class='flex items-center justify-center gap-x-2 px-4 py-2 font-semibold hover:bg-secondary hover:text-white'
+        lang='ar'
+      >
+        <span class='fi fi-ma'></span>
+        <span> العربية </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href='/en'
+        class='flex items-center justify-center gap-x-2 px-4 py-2 font-semibold hover:bg-secondary hover:text-white'
+      >
+        <span class='fi fi-us'></span>
+        <span> English </span>
+      </a>
+    </li>
+  </ul>
+</div>

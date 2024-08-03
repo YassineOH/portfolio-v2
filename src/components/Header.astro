@@ -1,7 +1,8 @@
 ---
 import { getLangFromUrl, useTranslation } from '~/lib/i18n';
-import { ui, type UILang } from '~/lib/i18n/ui';
+import { type UILang } from '~/lib/i18n/ui';
 import ToggleTheme from './ToggleTheme.astro';
+import ChangeLang from './ChangeLang.astro';
 
 type Link = { label: keyof UILang['ar' | 'en']; pathname: string };
 const links: Link[] = [
@@ -12,6 +13,7 @@ const links: Link[] = [
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslation(lang);
 const { pathname } = Astro.url;
+console.log(pathname);
 ---
 
 <header
@@ -29,7 +31,9 @@ const { pathname } = Astro.url;
               'px-4 py-2 text-lg font-semibold capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm',
               {
                 'rounded-full bg-primary text-background opacity-[1]':
-                  pathname == `/${lang}${l.pathname}`,
+                  pathname.endsWith('/')
+                    ? pathname
+                    : pathname + '/' === `/${lang}${l.pathname}`,
               },
             ]}
           >
@@ -42,7 +46,9 @@ const { pathname } = Astro.url;
       <li>
         <ToggleTheme />
       </li>
-      <li>L</li>
+      <li>
+        <ChangeLang />
+      </li>
     </ul>
   </ul>
 </header>
