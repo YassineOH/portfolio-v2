@@ -14,7 +14,9 @@ const lang = getLangFromUrl(Astro.url);
     <meta name='generator' content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class='bg-background font-base text-text'>
+  <body
+    class='bg-background font-base text-text transition-all duration-100 ease-in-out'
+  >
     <Header />
     <slot />
   </body>

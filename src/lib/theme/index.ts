@@ -8,13 +8,15 @@ export const getThemePreference = () => {
 };
 
 export const toggleTheme = () => {
-  const isDark = getThemePreference() === 'dark';
+  const isDark = getThemePreference() !== 'dark';
   document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 };
 
 export const initializeTheme = () => {
-  toggleTheme();
+  const isDark = getThemePreference() === 'dark';
+  document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
   if (typeof localStorage !== undefined) {
     const observer = new MutationObserver(() => {
       const isDark = getThemePreference() === 'dark';

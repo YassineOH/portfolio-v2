@@ -1,0 +1,23 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<button
+  id='btn-theme'
+  class='flex items-center justify-center rounded-full border border-text p-3 transition-colors duration-300 hover:bg-black/10 dark:hover:bg-gray-100/10'
+>
+  <Icon
+    name='sun'
+    title='light mode'
+    class='block dark:hidden'
+    height={15}
+    width={15}
+  />
+  <Icon
+    name='moon'
+    title='dark mode'
+    class='hidden dark:block'
+    height={15}
+    width={15}
+  />
+</button>
