@@ -1,8 +1,12 @@
 ---
-import Header from '~/components/Header.astro';
+interface Props {
+  pageTitle: string;
+}
 import { getLangFromUrl } from '~/lib/i18n';
+import Header from '~/components/Header.astro';
 import '../styles/index.css';
 
+const { pageTitle } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -11,12 +15,15 @@ const lang = getLangFromUrl(Astro.url);
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='viewport' content='width=device-width' />
+    <meta name='author' content='YASSINE OFQIR-HAMMA' />
+    <meta
+      name='description'
+      content="Hi, I'm yassine ofqir-hamma a web developer, welcom to my portfolio."
+    />
     <meta name='generator' content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
-  <body
-    class='relative overflow-hidden bg-background font-base text-text transition-all duration-100 ease-in-out'
-  >
+  <body class='relative overflow-hidden bg-background font-base text-text'>
     <Header />
     <slot />
   </body>

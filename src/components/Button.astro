@@ -1,20 +1,22 @@
 ---
 interface Props {
   link?: string;
+  label?: string;
   size?: 'default' | 'lg';
   variant?: 'default' | 'secondary' | 'outline';
 }
 
-const { size = 'default', variant = 'default', link } = Astro.props;
+const { size = 'default', variant = 'default', link, label = '' } = Astro.props;
 
 const Tag = link ? 'a' : 'button';
 ---
 
 <Tag
+  aria-label={label}
   class:list={[
-    'cursor-pointer rounded-full px-5 py-3 font-base text-sm font-semibold shadow-primary transition-all duration-300 hover:scale-95 hover:shadow-[0px_0px_10px_1px] hover:shadow-primary',
+    'cursor-pointer rounded-full px-5 py-3 font-base font-semibold shadow-primary transition-all duration-300 hover:scale-95 hover:shadow-[0px_0px_10px_1px] hover:shadow-primary',
     {
-      'px-7 py-3': size === 'lg',
+      'px-7 py-3 text-base': size === 'lg',
     },
     {
       'bg-primary text-white hover:shadow-primary': variant === 'default',
