@@ -4,12 +4,13 @@ interface Props {
   size?: 'default' | 'lg';
   variant?: 'default' | 'secondary' | 'outline';
 }
-const { link, size = 'default', variant = 'default' } = Astro.props;
 
-const isButton = !!link;
+const { size = 'default', variant = 'default', link } = Astro.props;
+
+const Tag = link ? 'a' : 'button';
 ---
 
-<button
+<Tag
   class:list={[
     'cursor-pointer rounded-full px-5 py-3 font-base text-sm font-semibold shadow-primary transition-all duration-300 hover:scale-95 hover:shadow-[0px_0px_10px_1px] hover:shadow-primary',
     {
@@ -26,6 +27,7 @@ const isButton = !!link;
         variant === 'outline',
     },
   ]}
+  href={link}
 >
   <slot />
-</button>
+</Tag>
