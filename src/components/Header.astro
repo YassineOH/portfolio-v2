@@ -3,6 +3,7 @@ import { getLangFromUrl, useTranslation } from '~/lib/i18n';
 import { type UILang } from '~/lib/i18n/ui';
 import ToggleTheme from './ToggleTheme.astro';
 import ChangeLang from './ChangeLang.astro';
+import ButtonMenu from './ButtonMenu.astro';
 
 type Link = { label: keyof UILang['ar' | 'en']; pathname: string };
 const links: Link[] = [
@@ -16,10 +17,13 @@ const { pathname } = Astro.url;
 ---
 
 <header
-  class='flex h-screen w-screen items-center justify-center shadow-sm lg:h-auto'
+  class='relative flex w-screen items-center justify-center shadow-sm lg:sticky lg:h-auto lg:translate-y-[0]'
 >
+  <ButtonMenu />
   <ul
-    class='flex flex-col items-center justify-center gap-x-14 gap-y-8 py-4 lg:flex-row'
+    id='menu'
+    data-state='close'
+    class='absolute bottom-0 flex h-screen w-full flex-col items-center justify-center gap-x-14 gap-y-8 py-4 lg:relative lg:h-auto lg:flex-row'
   >
     {
       links.map((l) => (
