@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import motherSVG from '~/assets/mother.svg';
-import spiderSVG from '~/assets/spider.svg';
-import axeSVG from '~/assets/axe.svg';
+import motherSVG from '~/assets/mother.png';
+import spiderSVG from '~/assets/spider.png';
+import axeSVG from '~/assets/axe.png';
 ---
 
-<div class='relative hidden h-96 w-96 lg:block'>
+<div class='relative hidden h-80 w-80 lg:block'>
   <Image
     format='avif'
     class='absolute inset-0'
@@ -16,7 +16,7 @@ import axeSVG from '~/assets/axe.svg';
   />
   <Image
     format='avif'
-    class='absolute inset-0 top-[0x] origin-[center_276px] animate-spin animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear'
+    class='absolute inset-0 top-[0x] origin-[center_230px] animate-spin animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear'
     src={spiderSVG}
     alt='spider'
     id='spider'
@@ -24,7 +24,7 @@ import axeSVG from '~/assets/axe.svg';
   />
   <Image
     format='avif'
-    class='absolute inset-0 origin-[center_276px]'
+    class='absolute inset-0 origin-[center_230px]'
     src={axeSVG}
     alt='axe'
     id='axe'
