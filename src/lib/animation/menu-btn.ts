@@ -50,3 +50,23 @@ export const BtnAnimation = () => {
   );
   return tl;
 };
+
+export const menuAnimation = () => {
+  const menu = document.querySelector('#menu');
+  const tl = gsap.timeline();
+
+  tl.fromTo(
+    menu,
+    {
+      opacity: 0,
+      top: -300,
+    },
+    {
+      opacity: 1,
+      top: 1,
+      duration: 1,
+      ease: 'power1.inOut',
+    },
+  );
+  return tl;
+};
