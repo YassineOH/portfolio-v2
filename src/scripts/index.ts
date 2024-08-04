@@ -4,6 +4,7 @@ import './btn-theme';
 import './btn-language';
 import './menu-btn';
 import './typing';
+import './astrolab';
 
 window.onload = () => {
   initializeTheme();
