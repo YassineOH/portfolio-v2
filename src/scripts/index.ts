@@ -6,7 +6,7 @@ import './menu-btn';
 import './typing';
 import './astrolab';
 
-window.onload = () => {
-  initializeTheme();
-  animateStars();
-};
+// window.onload = () => {
+initializeTheme();
+animateStars();
+// };
