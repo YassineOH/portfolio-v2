@@ -7,10 +7,10 @@ if (axe !== null) {
     const currentX = e.clientX;
     const currentY = e.clientY;
     const { height, width, x, y } = axe.getBoundingClientRect();
-    const disX = Math.ceil(currentX - (x + width / 2));
-    const disY = Math.ceil(currentY - (y + height / 2));
+    const disX = currentX - (x + width / 2);
+    const disY = currentY - (y + height / 2);
 
-    const angle = (Math.atan(disY / disX) * 180) / Math.PI;
+    const angle = Math.atan2(disY, disX) * (180 / Math.PI);
     gsap.to(axe, {
       rotate: angle,
       duration: 0.1,

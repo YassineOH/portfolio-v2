@@ -5,7 +5,9 @@ import spiderSVG from '~/assets/spider.png';
 import axeSVG from '~/assets/axe.png';
 ---
 
-<div class='relative hidden h-80 w-80 lg:block'>
+<div
+  class='pointer-events-none relative -z-10 block aspect-square w-40 select-none lg:w-80'
+>
   <Image
     format='avif'
     class='absolute inset-0'
@@ -16,7 +18,7 @@ import axeSVG from '~/assets/axe.png';
   />
   <Image
     format='avif'
-    class='absolute inset-0 top-[0x] origin-[center_230px] animate-spin animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear'
+    class='absolute inset-0 top-[0x] origin-[center_115px] animate-spin animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear lg:origin-[center_230px]'
     src={spiderSVG}
     alt='spider'
     id='spider'
@@ -24,7 +26,7 @@ import axeSVG from '~/assets/axe.png';
   />
   <Image
     format='avif'
-    class='absolute inset-0 origin-[center_230px]'
+    class='animate-ease-linea absolute inset-0 origin-[center_115px] animate-spin animate-duration-[100000ms] animate-infinite lg:origin-[center_230px] lg:animate-none'
     src={axeSVG}
     alt='axe'
     id='axe'
