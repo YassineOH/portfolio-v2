@@ -9,6 +9,8 @@ const [, path] = pathname.split(lang);
 
 <div class='relative'>
   <button
+    aria-label='change language'
+    type='button'
     id='btn-language'
     class='flex items-center justify-center rounded-full border border-text p-3 transition-colors duration-300 hover:bg-black/10 dark:hover:bg-gray-100/10'
   >
@@ -21,8 +23,7 @@ const [, path] = pathname.split(lang);
     <li>
       <a
         href={'/ar' + path}
-        class='flex items-center justify-center gap-x-2 px-4 py-2 font-semibold hover:bg-secondary hover:text-white'
-        lang='ar'
+        class='flex items-center justify-center gap-x-2 px-4 py-2 font-[Zain] font-semibold hover:bg-secondary hover:text-white'
       >
         <Icon name='ma' />
         <span> العربية </span>

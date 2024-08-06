@@ -3,8 +3,10 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <button
+  type='button'
   id='btn-theme'
   class='flex items-center justify-center rounded-full border border-text p-3 transition-colors duration-300 hover:bg-black/10 dark:hover:bg-gray-100/10'
+  aria-label='toggle theme'
 >
   <Icon
     name='sun'
