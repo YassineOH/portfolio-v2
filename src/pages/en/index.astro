@@ -20,7 +20,7 @@ import { Content as PromoContent } from '~/content/en/journey.md';
       <Heading tag='h1' class='text-center uppercase'>
         yassine <br class='block lg:hidden' /> ofqir-hamma
       </Heading>
-      <Heading tag='h4'>
+      <Heading tag='h2' style='h4'>
         I'm a
         <span class='rounded-md bg-secondary py-2 text-white'>
           &nbsp;<span id='text'></span><span id='cursor'>|</span>&nbsp;
@@ -32,8 +32,9 @@ import { Content as PromoContent } from '~/content/en/journey.md';
   </main>
 
   <!-- section 2 -->
-  <section class='h-auto w-full py-6 lg:py-40'>
+  <section class='h-auto w-full py-6 lg:py-40' id='dev-journey-section'>
     <TextWrapper
+      articleId='journey'
       class='prose prose-sm prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <PromoContent />
