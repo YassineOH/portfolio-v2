@@ -18,7 +18,7 @@ export const animateSections = (trigger: Element, children: Element) => {
       start: '0% 100%',
       end: '100% 100%',
       scrub: true,
-      markers: true,
+      // markers: true,
     },
     opacity: 1,
     scale: 1,
