@@ -17,13 +17,13 @@ const { pathname } = Astro.url;
 ---
 
 <header
-  class='relative flex w-screen items-center justify-center shadow-sm lg:sticky lg:h-auto lg:translate-y-[0]'
+  class='sticky left-0 top-0 z-10 flex w-screen items-center justify-center shadow-sm lg:h-auto lg:translate-y-[0]'
 >
   <ButtonMenu />
   <ul
     id='menu'
     data-state='close'
-    class='absolute bottom-0 flex h-screen w-full flex-col items-center justify-center gap-x-14 gap-y-8 bg-background py-4 lg:relative lg:top-0 lg:h-auto lg:flex-row'
+    class='absolute bottom-0 flex h-screen w-full flex-col items-center justify-center gap-x-14 gap-y-8 bg-background bg-opacity-100 py-4 backdrop-blur-xl dark:bg-[#0f1624]/30 lg:relative lg:top-0 lg:h-auto lg:flex-row lg:bg-white/30 lg:bg-opacity-40'
   >
     {
       links.map((l) => (

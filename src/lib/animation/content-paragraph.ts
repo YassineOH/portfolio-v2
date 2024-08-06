@@ -15,10 +15,10 @@ export const animateSections = (trigger: Element, children: Element) => {
   tl.to(children, {
     scrollTrigger: {
       trigger,
-      start: '0% 70%',
-      end: '100% 70%',
+      start: '0% 90%',
+      end: '100% 90%',
       scrub: true,
-      // markers: true,
+      // markers: true,z
     },
     opacity: 1,
     scale: 1,
