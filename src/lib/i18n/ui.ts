@@ -9,12 +9,12 @@ export const ui = {
   en: {
     'nav.home': 'home',
     'nav.about': 'about',
-    'nav.projects': 'projects',
+    'nav.showcases': 'showcases',
   },
   ar: {
     'nav.home': 'الرئيسية',
     'nav.about': 'معلومات',
-    'nav.projects': 'مشاريع',
+    'nav.showcases': 'مشاريع',
   },
 } as const;
 

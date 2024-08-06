@@ -14,10 +14,26 @@ export default {
 			fontFamily: {
 				base: 'var(--base)',
 				headings: 'var(--headings)'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						a: {
+							color: 'var(--secondary)',
+							'&:hover': {
+								color: 'brightness(var(--secondary), 99%)'
+							}
+						},
+						strong: {
+							color: 'var(--primary)'
+						}
+					}
+				}
 			}
 		},
 	},
 	plugins: [
-		require('tailwindcss-animated')
+		require('tailwindcss-animated'),
+		require('@tailwindcss/typography'),
 	],
 }

@@ -2,7 +2,10 @@
 import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
 import Button from '~/components/Button.astro';
+import TextWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
+import { Content as PromoContent } from '~/content/ar/journey.md';
+import Heading from '~/components/Heading.astro';
 ---
 
 <Base pageTitle='ياسين أفقير حما'>
@@ -10,22 +13,29 @@ import Base from '~/layouts/Base.astro';
 
   <main
     id='hero'
-    class='container mx-auto flex h-[calc(100vh-100px)] w-full flex-col items-center justify-center gap-y-20 lg:gap-y-24'
+    class='container mx-auto flex h-screen w-full flex-col items-center justify-center gap-y-20 lg:h-[calc(100vh-100px)] lg:gap-y-24'
   >
     <div class='flex flex-col items-center justify-center gap-y-6'>
-      <h1
-        class='text-center font-headings text-3xl font-bold uppercase lg:text-4xl xl:text-5xl'
-      >
+      <Heading tag='h1' class='text-center uppercase'>
         ياسين <br class='block lg:hidden' /> أفقير حما
-      </h1>
-      <h2 class='text-lg text-gray-400 lg:text-xl xl:text-3xl'>
+      </Heading>
+      <Heading tag='h4'>
         أنا
         <span class='rounded-md bg-secondary py-2 text-white'>
           &nbsp;<span id='text'></span><span id='cursor'>|</span>&nbsp;
         </span>
-      </h2>
+      </Heading>
     </div>
     <Button size='lg' link='#contact' label='تواصل معي'> تواصل معي </Button>
     <Astrolab />
   </main>
+
+  <!-- section 2 -->
+  <section class='h-auto w-full py-6 lg:py-40'>
+    <TextWrapper
+      class='prose prose-sm prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
+    >
+      <PromoContent />
+    </TextWrapper>
+  </section>
 </Base>

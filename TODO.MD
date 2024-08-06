@@ -1,4 +1,4 @@
 # To do list
 
- - [ ] Heading components.
+ - [x] Heading components.
  - [ ] Text content.

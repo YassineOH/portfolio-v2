@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 
-const container = document.querySelector('#hero') as HTMLDivElement;
+const container = document.querySelector('body')!;
 const axe = document.querySelector('#axe') as HTMLDivElement | null;
 if (axe !== null) {
   container.addEventListener('mousemove', (e) => {
