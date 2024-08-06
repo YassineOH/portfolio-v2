@@ -2,6 +2,7 @@
 import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
 import Button from '~/components/Button.astro';
+import Heading from '~/components/Heading.astro';
 import Base from '~/layouts/Base.astro';
 ---
 
@@ -12,17 +13,15 @@ import Base from '~/layouts/Base.astro';
     class='container mx-auto flex h-[calc(100vh-100px)] w-full flex-col items-center justify-center gap-y-20 lg:gap-y-24'
   >
     <div class='flex flex-col items-center justify-center gap-y-6'>
-      <h1
-        class='text-center font-headings text-3xl font-bold uppercase lg:text-4xl xl:text-5xl'
-      >
+      <Heading tag='h1' class='text-center uppercase'>
         yassine <br class='block lg:hidden' /> ofqir-hamma
-      </h1>
-      <h2 class='text-lg text-gray-400 lg:text-xl xl:text-3xl'>
+      </Heading>
+      <Heading tag='h4'>
         I'm a
         <span class='rounded-md bg-secondary py-2 text-white'>
           &nbsp;<span id='text'></span><span id='cursor'>|</span>&nbsp;
         </span>
-      </h2>
+      </Heading>
     </div>
     <Button size='lg' link='#contact' label='contact me'> Get in touch </Button>
     <Astrolab />

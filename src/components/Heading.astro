@@ -1,0 +1,25 @@
+---
+interface Props {
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  class?: string;
+}
+
+const { tag, class: className } = Astro.props;
+const Element = tag;
+---
+
+<Element
+  class:list={[
+    {
+      'font-headings text-3xl font-extrabold lg:text-4xl xl:text-5xl':
+        tag === 'h1',
+      'font-headings text-2xl font-bold lg:text-3xl xl:text-4xl': tag === 'h2',
+      'font-headings text-xl font-semibold lg:text-2xl xl:text-2xl':
+        tag === 'h3',
+      'font-base text-base lg:text-lg xl:text-xl': tag === 'h4',
+    },
+    className,
+  ]}
+>
+  <slot />
+</Element>
