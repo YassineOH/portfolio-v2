@@ -1,13 +1,14 @@
 ---
 import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
-import Button from '~/components/Button.astro';
+// import Button from '~/components/Button.astro';
 import Heading from '~/components/Heading.astro';
 import ContentWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
 import Form from '~/components/Form.astro';
 // const devJourny = await Astro.glob('../../content/en/journey.md');
-import { Content as PromoContent } from '~/content/en/journey.md';
+import { Content } from '~/content/en/journey.md';
+import { buttonVariants } from '~/lib/buttonVariants';
 ---
 
 <Base pageTitle='YASSINE OFQIR-HAMMA'>
@@ -27,7 +28,13 @@ import { Content as PromoContent } from '~/content/en/journey.md';
         </span>
       </Heading>
     </div>
-    <Button size='lg' link='#contact' label='contact me'> Get in touch </Button>
+    <a
+      href='#contact'
+      class:list={buttonVariants({ size: 'lg' })}
+      aria-label='contact me'
+    >
+      Get in touch
+    </a>
     <Astrolab />
   </main>
 
@@ -38,9 +45,9 @@ import { Content as PromoContent } from '~/content/en/journey.md';
   >
     <ContentWrapper
       articleId='journey'
-      class='prose text-justify text-text prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
+      class='prose text-text prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
-      <PromoContent />
+      <Content />
     </ContentWrapper>
   </section>
   <!-- form -->

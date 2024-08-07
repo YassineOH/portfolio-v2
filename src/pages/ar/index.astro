@@ -1,12 +1,12 @@
 ---
 import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
-import Button from '~/components/Button.astro';
 import ContentWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
-import { Content as PromoContent } from '~/content/ar/journey.md';
+import { Content } from '~/content/ar/journey.md';
 import Heading from '~/components/Heading.astro';
 import Form from '~/components/Form.astro';
+import { buttonVariants } from '~/lib/buttonVariants';
 ---
 
 <Base pageTitle='ياسين أفقير حما'>
@@ -27,7 +27,13 @@ import Form from '~/components/Form.astro';
         </span>
       </Heading>
     </div>
-    <Button size='lg' link='#contact' label='تواصل معي'> تواصل معي </Button>
+    <a
+      class:list={buttonVariants({ size: 'lg' })}
+      href='#contact'
+      aria-label='تواصل معي'
+    >
+      تواصل معي
+    </a>
     <Astrolab />
   </main>
 
@@ -37,7 +43,7 @@ import Form from '~/components/Form.astro';
       articleId='journey'
       class='prose prose-sm prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
-      <PromoContent />
+      <Content />
     </ContentWrapper>
   </section>
   <!-- form -->

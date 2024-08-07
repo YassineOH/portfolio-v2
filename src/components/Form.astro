@@ -1,12 +1,23 @@
 ---
-import Button from './Button.astro';
+import { buttonVariants } from '~/lib/buttonVariants';
 import { useTranslation, getLangFromUrl } from '~/lib/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslation(lang);
+const KEY = import.meta.env.WEB3FORM;
 ---
 
-<form action='' class='flex w-full flex-col gap-y-4'>
+<form
+  class='flex w-full flex-col gap-y-4'
+  action='https://api.web3forms.com/submit'
+  method='POST'
+  id='form'
+  class='needs-validation'
+  data-astro-reload
+  novalidate
+>
+  <input type='hidden' name='access_key' value={KEY} />
+  <input type='checkbox' class='hidden' style='display:none' name='botcheck' />
   <div class='flex flex-col items-stretch justify-start gap-y-2'>
     <label class='capitalize' for='name'>{t('form.name')}:</label>
     <input
@@ -16,6 +27,9 @@ const t = useTranslation(lang);
       type='text'
       required
     />
+    <div class='empty-feedback invalid-feedback mt-1 text-sm text-red-400'>
+      {t('form.missingName')}
+    </div>
   </div>
   <div class='flex flex-col items-stretch justify-start gap-y-2'>
     <label class='capitalize' for='email'>{t('form.email')}:</label>
@@ -26,6 +40,9 @@ const t = useTranslation(lang);
       type='email'
       required
     />
+    <div class='empty-feedback invalid-feedback mt-1 text-sm text-red-400'>
+      {t('form.missingEmail')}
+    </div>
   </div>
   <div class='flex flex-col items-stretch justify-start gap-y-2'>
     <label class='capitalize' for='message'>{t('form.message')}:</label>
@@ -35,6 +52,31 @@ const t = useTranslation(lang);
       name='message'
       class='rounded-lg border-2 border-primary bg-background px-4 py-2 focus:border-secondary focus-visible:outline-none'
       required></textarea>
+    <div class='empty-feedback invalid-feedback mt-1 text-sm text-red-400'>
+      {t('form.missingMessage')}
+    </div>
   </div>
-  <Button> {t('form.send')} </Button>
+  <button type='submit' class:list={buttonVariants({})}>{t('form.send')}</button
+  >
+  <div id='result' class='mt-3 w-full rounded-full py-4 text-center text-white'>
+  </div>
 </form>
+<style>
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+</style>

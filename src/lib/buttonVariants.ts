@@ -1,19 +1,10 @@
----
-interface Props {
-  link?: string;
-  label?: string;
-  size?: 'default' | 'lg';
+type Input = {
   variant?: 'default' | 'secondary' | 'outline';
-}
+  size?: 'lg';
+};
 
-const { size = 'default', variant = 'default', link, label = '' } = Astro.props;
-
-const Tag = link ? 'a' : 'button';
----
-
-<Tag
-  aria-label={label}
-  class:list={[
+export const buttonVariants = ({ variant = 'default', size }: Input) => {
+  return [
     'cursor-pointer rounded-full px-5 py-3 font-base font-semibold shadow-primary transition-all duration-300 hover:scale-95 hover:shadow-[0px_0px_200px_2px] hover:shadow-primary hover:brightness-105',
     {
       'px-7 py-3 text-base': size === 'lg',
@@ -28,8 +19,5 @@ const Tag = link ? 'a' : 'button';
       'border border-primary bg-transparent text-primary hover:bg-primary hover:text-background':
         variant === 'outline',
     },
-  ]}
-  href={link}
->
-  <slot />
-</Tag>
+  ];
+};

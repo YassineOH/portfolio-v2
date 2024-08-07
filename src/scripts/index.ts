@@ -7,6 +7,7 @@ import './menu-btn';
 import './typing';
 import './astrolab';
 import './content-animation';
+import './form-submission';
 
 const lenis = new Lenis();
 
