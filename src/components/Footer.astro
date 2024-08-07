@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components';
+import Heading from './Heading.astro';
+---
+
+<footer class='w-full bg-primary py-6 lg:p-12'>
+  <div
+    class='mx-auto grid w-full max-w-[800px] grid-cols-1 gap-y-6 px-10 text-background dark:text-text lg:grid-cols-2'
+  >
+    <div class='flex flex-col items-stretch justify-center'>
+      <Heading tag='h3'> Yassine OFQIR-HAAMA </Heading>
+      <p>
+        Email: <a href='mailto:someone@example.com'>yassine.yas98@gmail.com</a>
+      </p>
+    </div>
+    <div class='flex flex-col items-stretch justify-center'>
+      <ul class='flex flex-col items-stretch'>
+        <li class='flex items-center justify-start gap-x-4'>
+          <Icon name='github' />
+          <a href='https://github.com/YassineOH' aria-label='github link'
+            >Github</a
+          >
+        </li>
+        <li class='flex items-center justify-start gap-x-4'>
+          <Icon name='linkedIn' />
+          <a
+            href='https://www.linkedin.com/in/yassine-ofqir-hamma-52b5a7165/'
+            aria-label='linkedin link'>LinkedIn</a
+          >
+        </li>
+        <li class='flex items-center justify-start gap-x-4'>
+          <Icon name='x' />
+          <a href='' aria-label='x link'>x</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class='w-full text-center text-sm italic'>
+    All copy right are reserved &copy; yassineoh 2024;
+  </p>
+</footer>
