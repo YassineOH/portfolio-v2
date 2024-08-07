@@ -2,10 +2,11 @@
 import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
 import Button from '~/components/Button.astro';
-import TextWrapper from '~/components/TextWrapper.astro';
+import ContentWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
 import { Content as PromoContent } from '~/content/ar/journey.md';
 import Heading from '~/components/Heading.astro';
+import Form from '~/components/Form.astro';
 ---
 
 <Base pageTitle='ياسين أفقير حما'>
@@ -32,16 +33,18 @@ import Heading from '~/components/Heading.astro';
 
   <!-- section 2 -->
   <section class='h-auto w-full py-6 lg:py-24' id='dev-journey-section'>
-    <TextWrapper
+    <ContentWrapper
       articleId='journey'
       class='prose prose-sm prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <PromoContent />
-    </TextWrapper>
+    </ContentWrapper>
   </section>
   <!-- form -->
-  <section class='h-auto w-full py-6 lg:py-40'>
-    form here
-    <div class='h-60'>sdsfds</div>
+  <section class='h-auto w-full py-6 lg:py-12' id='contact'>
+    <ContentWrapper class='space-y-5' articleId='content-contact'>
+      <Heading tag='h2'>تواصل معي</Heading>
+      <Form />
+    </ContentWrapper>
   </section>
 </Base>

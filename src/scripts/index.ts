@@ -6,7 +6,7 @@ import './btn-language';
 import './menu-btn';
 import './typing';
 import './astrolab';
-import './journey-animation';
+import './content-animation';
 
 const lenis = new Lenis();
 

@@ -3,9 +3,9 @@ import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
 import Button from '~/components/Button.astro';
 import Heading from '~/components/Heading.astro';
-import TextWrapper from '~/components/TextWrapper.astro';
+import ContentWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
-
+import Form from '~/components/Form.astro';
 // const devJourny = await Astro.glob('../../content/en/journey.md');
 import { Content as PromoContent } from '~/content/en/journey.md';
 ---
@@ -32,17 +32,22 @@ import { Content as PromoContent } from '~/content/en/journey.md';
   </main>
 
   <!-- section 2 -->
-  <section class='h-auto w-full py-6 lg:py-40' id='dev-journey-section'>
-    <TextWrapper
+  <section
+    class='h-auto w-full py-6 lg:pb-12 lg:pt-40'
+    id='dev-journey-section'
+  >
+    <ContentWrapper
       articleId='journey'
-      class='prose text-justify prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
+      class='prose text-justify text-text prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <PromoContent />
-    </TextWrapper>
+    </ContentWrapper>
   </section>
   <!-- form -->
-  <section class='h-auto w-full py-6 lg:py-24'>
-    form here
-    <div class='h-60'>sdsfds</div>
+  <section class='h-auto w-full py-6 lg:py-12' id='contact'>
+    <ContentWrapper class='space-y-5' articleId='content-contact'>
+      <Heading tag='h2'>Contact me</Heading>
+      <Form />
+    </ContentWrapper>
   </section>
 </Base>

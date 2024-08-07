@@ -1,0 +1,40 @@
+---
+import Button from './Button.astro';
+import { useTranslation, getLangFromUrl } from '~/lib/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
+---
+
+<form action='' class='flex w-full flex-col gap-y-4'>
+  <div class='flex flex-col items-stretch justify-start gap-y-2'>
+    <label class='capitalize' for='name'>{t('form.name')}:</label>
+    <input
+      id='name'
+      name='name'
+      class='rounded-full border-2 border-primary bg-background px-4 py-2 focus:border-secondary focus-visible:outline-none'
+      type='text'
+      required
+    />
+  </div>
+  <div class='flex flex-col items-stretch justify-start gap-y-2'>
+    <label class='capitalize' for='email'>{t('form.email')}:</label>
+    <input
+      id='email'
+      name='email'
+      class='rounded-full border-2 border-primary bg-background px-4 py-2 focus:border-secondary focus-visible:outline-none'
+      type='email'
+      required
+    />
+  </div>
+  <div class='flex flex-col items-stretch justify-start gap-y-2'>
+    <label class='capitalize' for='message'>{t('form.message')}:</label>
+    <textarea
+      rows='5'
+      id='message'
+      name='message'
+      class='rounded-lg border-2 border-primary bg-background px-4 py-2 focus:border-secondary focus-visible:outline-none'
+      required></textarea>
+  </div>
+  <Button> {t('form.send')} </Button>
+</form>

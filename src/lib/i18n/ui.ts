@@ -10,11 +10,19 @@ export const ui = {
     'nav.home': 'home',
     'nav.about': 'about',
     'nav.showcases': 'showcases',
+    'form.name': 'name',
+    'form.email': 'email',
+    'form.message': 'message',
+    'form.send': 'send',
   },
   ar: {
     'nav.home': 'الرئيسية',
     'nav.about': 'معلومات',
     'nav.showcases': 'مشاريع',
+    'form.name': 'الاسم',
+    'form.email': 'البريد  الإلكتروني',
+    'form.message': 'الرسالة',
+    'form.send': 'إرسال',
   },
 } as const;
 
