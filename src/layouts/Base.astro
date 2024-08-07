@@ -11,7 +11,7 @@ const { pageTitle } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang={lang} dir={lang == 'ar' ? 'rtl' : 'ltr'}>
+<html lang={lang} dir={lang == 'ar' ? 'rtl' : 'ltr'} class='scroll-smooth'>
   <head>
     <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
@@ -30,9 +30,7 @@ const lang = getLangFromUrl(Astro.url);
     <meta name='generator' content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body
-    class='relative overflow-x-hidden scroll-smooth bg-background font-base text-text'
-  >
+  <body class='relative overflow-x-hidden bg-background font-base text-text'>
     <Header />
     <slot />
     <Footer />

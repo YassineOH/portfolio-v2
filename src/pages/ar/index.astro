@@ -7,6 +7,7 @@ import { Content } from '~/content/ar/journey.md';
 import Heading from '~/components/Heading.astro';
 import Form from '~/components/Form.astro';
 import { buttonVariants } from '~/lib/buttonVariants';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Base pageTitle='ياسين أفقير حما'>
@@ -44,6 +45,19 @@ import { buttonVariants } from '~/lib/buttonVariants';
       class='prose prose-sm prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <Content />
+      <p class='w-1/2'>
+        <a
+          href='/about'
+          class:list={buttonVariants({
+            variant: 'outline',
+            className: 'flex w-auto items-center justify-center gap-x-4',
+            size: 'sm',
+          })}
+        >
+          <span>معرفة المزيد عني</span>
+          <Icon name='arrow-left' />
+        </a>
+      </p>
     </ContentWrapper>
   </section>
   <!-- form -->

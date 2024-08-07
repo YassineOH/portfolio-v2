@@ -9,6 +9,7 @@ import Form from '~/components/Form.astro';
 // const devJourny = await Astro.glob('../../content/en/journey.md');
 import { Content } from '~/content/en/journey.md';
 import { buttonVariants } from '~/lib/buttonVariants';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Base pageTitle='YASSINE OFQIR-HAMMA'>
@@ -48,6 +49,19 @@ import { buttonVariants } from '~/lib/buttonVariants';
       class='prose text-text prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <Content />
+      <p class='w-1/2'>
+        <a
+          href='/about'
+          class:list={buttonVariants({
+            variant: 'outline',
+            className: 'flex w-auto items-center justify-center gap-x-4',
+            size: 'sm',
+          })}
+        >
+          <span> More about me </span>
+          <Icon name='arrow-right' />
+        </a>
+      </p>
     </ContentWrapper>
   </section>
   <!-- form -->

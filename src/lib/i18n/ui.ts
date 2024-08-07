@@ -19,6 +19,8 @@ export const ui = {
     'form.missingName': 'Please provide your full name.',
     'form.missingEmail': 'Please provide your email.',
     'form.missingMessage': 'Please provide your message.',
+    'footer.title': 'Yassine ofqir-hamma',
+    'footer.mail': 'Email',
   },
   ar: {
     'nav.home': 'الرئيسية',
@@ -33,6 +35,8 @@ export const ui = {
     'form.missingName': '.المرجو إدخال اسمك الكامل',
     'form.missingEmail': '.المرجو إدخال بريدك الإلكتروني',
     'form.missingMessage': '.المرجو إدخال رسالتك',
+    'footer.title': 'ياسين أفقير حما',
+    'footer.mail': 'البريد الإلكتروني',
   },
 } as const;
 

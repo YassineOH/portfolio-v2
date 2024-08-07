@@ -1,29 +1,44 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Heading from './Heading.astro';
+import { getLangFromUrl, useTranslation } from '~/lib/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+
+const t = useTranslation(lang);
 ---
 
-<footer class='w-full bg-primary py-6 lg:p-12'>
+<footer
+  class='w-full space-y-6 bg-primary pt-6 text-background dark:text-text lg:pt-12'
+>
+  <div class='mx-auto max-w-[800px] px-10'>
+    <Heading tag='h3'> <a href='/'> {t('footer.title')} </a></Heading>
+  </div>
   <div
-    class='mx-auto grid w-full max-w-[800px] grid-cols-1 gap-y-6 px-10 pb-3 text-background dark:text-text lg:grid-cols-2'
+    class='mx-auto grid w-full max-w-[800px] grid-cols-1 gap-y-6 px-10 pb-3 lg:grid-cols-2'
   >
-    <div class='flex flex-col items-stretch justify-center'>
-      <Heading tag='h3'> Yassine OFQIR-HAAMA </Heading>
+    <div class='flex flex-col items-stretch justify-start'>
       <p>
-        Email: <a href='mailto:someone@example.com'>yassine.yas98@gmail.com</a>
+        {t('footer.mail')}: <a href='mailto:someone@example.com'
+          >yassine.yas98@gmail.com</a
+        >
       </p>
     </div>
     <div class='flex flex-col items-stretch justify-center'>
       <ul class='flex flex-col items-stretch'>
         <li class='flex items-center justify-start gap-x-4'>
           <Icon name='github' />
-          <a href='https://github.com/YassineOH' aria-label='github link'
-            >Github</a
+
+          <a
+            target='_blank'
+            href='https://github.com/YassineOH'
+            aria-label='github link'>Github</a
           >
         </li>
         <li class='flex items-center justify-start gap-x-4'>
           <Icon name='linkedIn' />
           <a
+            target='_blank'
             href='https://www.linkedin.com/in/yassine-ofqir-hamma-52b5a7165/'
             aria-label='linkedin link'>LinkedIn</a
           >
@@ -35,7 +50,12 @@ import Heading from './Heading.astro';
       </ul>
     </div>
   </div>
-  <p class='w-full text-center text-sm italic'>
-    All copy right are reserved &copy; yassineoh 2024;
+  <p class='w-full py-1 text-center text-sm italic'>
+    {
+      lang === 'en'
+        ? 'All copy right are reserved  yassineoh 2024;'
+        : 'جميع الحقوق محفوظة; yassinoh 2024'
+    }
+    &copy;
   </p>
 </footer>
