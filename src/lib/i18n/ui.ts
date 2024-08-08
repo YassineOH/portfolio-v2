@@ -21,6 +21,11 @@ export const ui = {
     'form.missingMessage': 'Please provide your message.',
     'footer.title': 'Yassine ofqir-hamma',
     'footer.mail': 'Email',
+    'leetcode.easy': 'Easy',
+    'leetcode.medium': 'Medium',
+    'leetcode.hard': 'Hard',
+    'leetcode.rate': 'rate',
+    'leetcode.title': 'LeetCode Summary',
   },
   ar: {
     'nav.home': 'الرئيسية',
@@ -37,6 +42,11 @@ export const ui = {
     'form.missingMessage': '.المرجو إدخال رسالتك',
     'footer.title': 'ياسين أفقير حما',
     'footer.mail': 'البريد الإلكتروني',
+    'leetcode.easy': 'سهل',
+    'leetcode.medium': 'متوسط',
+    'leetcode.hard': 'صعب',
+    'leetcode.rate': 'القبول',
+    'leetcode.title': 'ملخص LeetCode',
   },
 } as const;
 

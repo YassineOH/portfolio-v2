@@ -1,26 +1,50 @@
 ---
+import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, useTranslation } from '~/lib/i18n';
 import { type LeetCodeStatus } from '~/lib/types';
 const res = await fetch('https://leetcode-stats-api.herokuapp.com/yassineoh');
 
 const data = (await res.json()) as LeetCodeStatus;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
 ---
 
-<aside
-  class='flex items-center justify-center rounded-lg bg-white/30 p-4 backdrop-blur-lg'
->
-  <div class='flex items-center justify-start gap-x-4'>
-    Easy: {data.easySolved}
-  </div>
-  <div class='flex items-center justify-start gap-x-4'>
-    Medium: {data.mediumSolved}
-  </div>
-  <div class='flex items-center justify-start gap-x-4'>
-    Easy: {data.easySolved}
-  </div>
-  <div class='flex items-center justify-start gap-x-4'>
-    Total: {data.totalSolved}
-  </div>
-  <div class='flex items-center justify-start gap-x-4'>
-    Acceptance Rate: {data.acceptanceRate}
+<aside class='animate-fade-up'>
+  <h2 class='flex gap-x-1'>
+    {t('leetcode.title')}
+    <a href='https://leetcode.com/u/yassineoh/' target='_blank'
+      ><Icon name='link' /></a
+    >:
+  </h2>
+  <div
+    class='grid grid-cols-2 items-center justify-between gap-y-3 rounded-lg bg-[#58b0de]/30 p-4 backdrop-blur-lg lg:grid-cols-4'
+  >
+    <div
+      class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold text-[#00b4b4]'
+    >
+      <span>{t('leetcode.easy')}</span>
+      {data.easySolved}
+    </div>
+    <div
+      class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold text-[#ffae00]'
+    >
+      <span>{t('leetcode.medium')}</span>
+
+      {data.mediumSolved}
+    </div>
+    <div
+      class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold text-[#f60000]'
+    >
+      <span>{t('leetcode.hard')}</span>
+
+      {data.easySolved}
+    </div>
+
+    <div
+      class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold'
+    >
+      <span>{t('leetcode.rate')}</span>
+      {data.acceptanceRate}%
+    </div>
   </div>
 </aside>

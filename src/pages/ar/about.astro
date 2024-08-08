@@ -2,6 +2,7 @@
 import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
 import TechCards from '~/components/TechCards.astro';
+import LeetCodeCard from '~/components/LeetCodeCard.astro';
 ---
 
 <Base pageTitle='About me'>
@@ -25,6 +26,7 @@ import TechCards from '~/components/TechCards.astro';
         أنا شغوف بالتكنولوجيا، سواء كانت تتعلق بالأجهزة أو البرمجيات، لكن لدي
         أيضًا اهتمامات أخرى مثل قراءة <em>الأدب العربي</em> و لعب ألعاب الفيديو.
       </p>
+      <LeetCodeCard />
     </ContentWrapper>
     <section id='stack' class='py-12 lg:py-24'>
       <ContentWrapper>
