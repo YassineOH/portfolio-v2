@@ -1,6 +1,0 @@
-# My dev Journey.
-I never imagined that just months before graduating as a renewable energy engineer, I would discover my true passion for programming. This realization began by chance while watching how Japanese light novel games are developed using scripting languages. Driven by curiosity, I started exploring resources to learn coding.
-
-My journey truly took off when I found  <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>, where I began learning HTML, CSS, and, most importantly, ~~*JavaScript*~~ -now **TypeScript**-. As I built my skills, I sought out tutorials from renowned web development creators on YouTube, which taught me how to create websites from scratch and introduced me to libraries and frameworks like React.js and Next.js.
-
-After a few months of following beginner tutorials, I transitioned to learning from official documentation and focused on advanced topics, diving into <a href="https://leetcode.com/u/yassineoh/" target="_blank">LeetCode challenges</a> to enhance my problem-solving skills. This self-taught path has not only sharpened my technical abilities but also fostered a relentless drive to keep learning and improving in the field of programming.

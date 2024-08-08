@@ -10,7 +10,10 @@ const { articleId = '' } = Astro.props;
 
 <article
   id={articleId}
-  class:list={['container mx-auto max-w-[720px] px-7', className]}
+  class:list={[
+    'container prose prose-sm mx-auto max-w-[720px] animate-fade-up px-7 dark:prose-invert lg:prose-base prose-h1:text-2xl prose-h2:text-xl lg:prose-h1:text-3xl lg:prose-h2:text-2xl',
+    className,
+  ]}
   {...attrs}
 >
   <slot />

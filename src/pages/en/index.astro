@@ -1,17 +1,14 @@
 ---
-import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
 import Heading from '~/components/Heading.astro';
 import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
 import Form from '~/components/Form.astro';
-import { Content } from '~/md/en/journey.md';
 import { buttonVariants } from '~/lib/buttonVariants';
 import { Icon } from 'astro-icon/components';
 ---
 
 <Base pageTitle='YASSINE OFQIR-HAMMA'>
-  <AnimatedBg />
   <main
     id='hero'
     class='container mx-auto flex h-screen w-full flex-col items-center justify-center gap-y-20 pb-10 lg:h-[calc(100vh-100px)] lg:gap-y-24 lg:pb-0'
@@ -42,11 +39,35 @@ import { Icon } from 'astro-icon/components';
     class='h-auto w-full py-6 lg:pb-12 lg:pt-40'
     id='dev-journey-section'
   >
-    <ContentWrapper
-      articleId='journey'
-      class='prose text-text prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
-    >
-      <Content />
+    <ContentWrapper articleId='journey'>
+      <h1>My dev Journey.</h1>
+      <p>
+        I never imagined that just months before graduating as a renewable
+        energy engineer, I would discover my true passion for programming. This
+        realization began by chance while watching how Japanese light novel
+        games are developed using scripting languages. Driven by curiosity, I
+        started exploring resources to learn coding.
+      </p>
+      <p>
+        My journey truly took off when I found <a
+          href='https://www.freecodecamp.org/'
+          target='_blank'>FreeCodeCamp</a
+        >, where I began learning HTML, CSS, and, most importantly, <em
+          class='line-through'>JavaScript</em
+        > -now <strong>TypeScript</strong> -. As I built my skills, I sought out
+        tutorials from renowned web development creators on YouTube, which taught
+        me how to create websites from scratch and introduced me to libraries and
+        frameworks like React.js and Next.js.
+      </p>
+      <p>
+        After a few months of following beginner tutorials, I transitioned to
+        learning from official documentation and focused on advanced topics,
+        diving into <a href='https://leetcode.com/u/yassineoh/' target='_blank'
+          >LeetCode challenges</a
+        > to enhance my problem-solving skills. This self-taught path has not only
+        sharpened my technical abilities but also fostered a relentless drive to
+        keep learning and improving in the field of programming.
+      </p>
       <p class='w-2/3 lg:w-1/2'>
         <a
           href='/en/about'

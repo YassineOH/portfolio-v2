@@ -3,27 +3,42 @@ import LeetCodeCard from '~/components/LeetCodeCard.astro';
 import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
 
-import { Content } from '~/md/en/about.md';
 import Heading from '~/components/Heading.astro';
 ---
 
 <Base pageTitle='About me'>
   <main class='container mx-auto py-12 lg:py-24'>
-    <ContentWrapper
-      articleId='about-me'
-      class='prose prose-sm animate-fade-up prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
-    >
-      <Content />
+    <ContentWrapper articleId='about-me'>
+      <h1>About me</h1>
+      <p>
+        Hi, I'm <strong>Yassine OFQIR-HAMMA</strong> from Morocco, born in 1998.
+        I studied renewable energy at university, but later decided to switch my
+        career to web development. You can learn more about <a
+          href='/en/#dev-journey-section'>my dev journey</a
+        > and why I made this decision.
+      </p>
+      <p>
+        Currently, I've been working as a solar engineer for 2 years, but I'm
+        actively seeking new opportunities in web development. As you'll see in
+        my projects section, I focus on building projects relevant to <em
+          >solar energy</em
+        > so that I can apply real use cases, avoiding generic and repetitive work.
+      </p>
+      <p>
+        I'm passionate about tech, both hardware and software, but I also enjoy
+        other interests like reading <em>Arabic literature</em> and playing video
+        games.
+      </p>
     </ContentWrapper>
 
     <section id='stack' class='py-12 lg:py-24'>
-      <ContentWrapper class='space-y-4'>
-        <Heading tag='h2'> The stack I use </Heading>
-        <Heading tag='h3'>
+      <ContentWrapper>
+        <h1>The stack I use</h1>
+        <h2>
           It's all about <span class='bg-[#3178c6] text-white'>Type Safety</span
           >❤️.
-        </Heading>
-        <p class='prose'>
+        </h2>
+        <p>
           TypeScript offers an exceptional developer experience, allowing for a
           seamless workflow across both client and server development. With the
           advent of <strong>React Server Components (RSC)</strong>, the

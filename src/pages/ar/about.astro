@@ -1,17 +1,29 @@
 ---
-import TextWrapper from '~/components/ContentWrapper.astro';
+import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
-
-import { Content } from '~/md/ar/about.md';
 ---
 
 <Base pageTitle='About me'>
   <main class='container mx-auto py-12 lg:py-24'>
-    <TextWrapper
-      articleId='about-me'
-      class='prose prose-sm animate-fade-up prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
-    >
-      <Content />
-    </TextWrapper>
+    <ContentWrapper articleId='about-me'>
+      <h1>نبذة عني.</h1>
+      <p>
+        مرحبًا، أنا <strong>ياسين أفقير حما</strong> من المغرب، وُلدت عام 1998. درست
+        الطاقة المتجددة في الجامعة، لكنني قررت لاحقًا تغيير مساري المهني إلى تطوير
+        الويب. يمكنك معرفة المزيد عن <a href='/ar/#dev-journey-section'
+          >رحلتي في تطوير البرمجيات</a
+        > ولماذا اتخذت هذا القرار.
+      </p>
+      <p>
+        حاليًا، أعمل كمهندس طاقة شمسية منذ عامين، لكنني أبحث بنشاط عن فرص جديدة
+        في مجال تطوير الويب. كما ستلاحظ في قسم مشاريعي، أركز على بناء مشاريع ذات
+        صلة <em>بالطاقة الشمسية</em>
+        حتى أتمكن من تطبيق الحالات العملية، متجنبًا العمل المتكرر والمشاريع العامة.
+      </p>
+      <p>
+        أنا شغوف بالتكنولوجيا، سواء كانت تتعلق بالأجهزة أو البرمجيات، لكن لدي
+        أيضًا اهتمامات أخرى مثل قراءة <em>الأدب العربي</em> و لعب ألعاب الفيديو.
+      </p>
+    </ContentWrapper>
   </main>
 </Base>

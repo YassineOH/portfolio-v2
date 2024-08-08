@@ -6,6 +6,7 @@ import { getLangFromUrl } from '~/lib/i18n';
 import Header from '~/components/Header.astro';
 import '../styles/index.css';
 import Footer from '~/components/Footer.astro';
+import AnimatedBg from '~/components/AnimatedBg.astro';
 
 const { pageTitle } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
@@ -31,6 +32,7 @@ const lang = getLangFromUrl(Astro.url);
     <title>{pageTitle}</title>
   </head>
   <body class='relative overflow-x-hidden bg-background font-base text-text'>
+    <AnimatedBg />
     <Header />
     <slot />
     <Footer />

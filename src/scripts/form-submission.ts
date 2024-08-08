@@ -6,6 +6,9 @@ document.addEventListener(
     const form = document.getElementById('form') as HTMLFormElement;
     const result = document.getElementById('result')!;
 
+    if (form === null) {
+      return;
+    }
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       form.classList.add('was-validated');

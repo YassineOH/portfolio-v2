@@ -23,4 +23,10 @@ const cursor = document.querySelector('#cursor')!;
 
 const lang = document.documentElement.lang;
 
-typingTextAnimation(text, cursor, lang === 'ar' ? sentences_ar : sentences_en);
+if (text !== null) {
+  typingTextAnimation(
+    text,
+    cursor,
+    lang === 'ar' ? sentences_ar : sentences_en,
+  );
+}

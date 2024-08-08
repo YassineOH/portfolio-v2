@@ -2,6 +2,9 @@ import { gsap } from 'gsap';
 
 export const animateStars = () => {
   const box = document.querySelector('#stars')!;
+  if (box === null) {
+    return null;
+  }
   const stars = Array.from(box.querySelectorAll('.star')!);
   if (box == null || stars == null) return;
 

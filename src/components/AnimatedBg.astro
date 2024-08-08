@@ -6,51 +6,53 @@ const numberOfStars = new Array(300).fill(null);
 ---
 
 <!-- stars in dark mode -->
-<div
-  id='stars'
-  class='invisible absolute inset-0 -z-30 h-screen w-screen dark:visible'
-  dir='ltr'
->
-  {
-    () =>
-      numberOfStars.map(() => (
-        <Icon name='star' class='star absolute text-sm lg:text-base' />
-      ))
-  }
-</div>
-<!-- Blur bubble works in light mode only! -->
-<div
-  class='absolute left-[10%] top-[270px] -z-20 block aspect-square w-40 origin-right animate-spin rounded-full bg-[#ebb542] opacity-30 blur-3xl animate-duration-[50000ms] animate-infinite animate-ease-linear dark:hidden dark:opacity-25 lg:w-96'
->
-</div>
-<div
-  class='absolute left-[50%] top-[270px] -z-20 block aspect-square w-40 origin-left animate-spin rounded-full bg-secondary opacity-30 blur-3xl delay-0 animate-reverse animate-duration-[50000ms] animate-infinite animate-ease-linear dark:hidden dark:opacity-25 lg:w-96 xl:left-[70%]'
->
-</div>
-
-<!-- Two rotating discs -->
-<div
-  class:list={[
-    'absolute inset-0 -z-10 flex h-screen w-screen items-center justify-between overflow-hidden',
-  ]}
-  dir='ltr'
->
-  <div class='-translate-x-1/2'>
-    <Image
-      format='avif'
-      src={disc}
-      alt='disc'
-      class='aspect-auto animate-spin opacity-50 animate-duration-[100000ms] animate-infinite animate-ease-linear'
-      loading='eager'
-    />
+<div class='h-sre sticky top-0 w-screen'>
+  <div
+    id='stars'
+    class='invisible absolute inset-0 -z-30 h-screen w-screen dark:visible'
+    dir='ltr'
+  >
+    {
+      () =>
+        numberOfStars.map(() => (
+          <Icon name='star' class='star absolute text-sm lg:text-base' />
+        ))
+    }
   </div>
-  <div class='translate-x-1/2'>
-    <Image
-      format='avif'
-      src={disc}
-      alt=''
-      class='aspect-auto animate-spin opacity-50 animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear'
-      loading='eager'
-    />
+  <!-- Blur bubble works in light mode only! -->
+  <div
+    class='absolute left-[10%] top-[270px] -z-20 block aspect-square w-40 origin-right animate-spin rounded-full bg-[#ebb542] opacity-30 blur-3xl animate-duration-[50000ms] animate-infinite animate-ease-linear dark:hidden dark:opacity-25 lg:w-96'
+  >
+  </div>
+  <div
+    class='absolute left-[50%] top-[270px] -z-20 block aspect-square w-40 origin-left animate-spin rounded-full bg-secondary opacity-30 blur-3xl delay-0 animate-reverse animate-duration-[50000ms] animate-infinite animate-ease-linear dark:hidden dark:opacity-25 lg:w-96 xl:left-[70%]'
+  >
+  </div>
+
+  <!-- Two rotating discs -->
+  <div
+    class:list={[
+      'absolute inset-0 -z-10 flex h-screen w-screen items-center justify-between overflow-hidden',
+    ]}
+    dir='ltr'
+  >
+    <div class='-translate-x-1/2'>
+      <Image
+        format='avif'
+        src={disc}
+        alt='disc'
+        class='aspect-auto animate-spin opacity-25 animate-duration-[100000ms] animate-infinite animate-ease-linear lg:opacity-50'
+        loading='eager'
+      />
+    </div>
+    <div class='translate-x-1/2'>
+      <Image
+        format='avif'
+        src={disc}
+        alt=''
+        class='aspect-auto animate-spin opacity-25 animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear lg:opacity-50'
+        loading='eager'
+      />
+    </div>
   </div>
 </div>
