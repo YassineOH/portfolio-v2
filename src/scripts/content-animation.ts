@@ -7,3 +7,7 @@ document.querySelectorAll('#journey > p').forEach((child) => {
 document.querySelectorAll('#content-contact > *').forEach((child) => {
   animateSections(child, child);
 });
+
+document.querySelectorAll('.tech-card').forEach((child) => {
+  animateSections(child, child);
+});

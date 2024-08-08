@@ -3,7 +3,6 @@ import LeetCodeCard from '~/components/LeetCodeCard.astro';
 import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
 
-import Heading from '~/components/Heading.astro';
 import TechCards from '~/components/TechCards.astro';
 ---
 
@@ -56,8 +55,16 @@ import TechCards from '~/components/TechCards.astro';
             >Next.js</strong
           >
         </p>
-        <div class='space-y-4'>
+        <div class='space-y-4 pt-6'>
+          <TechCards tag='language' title='Language' />
           <TechCards tag='framework' title='Frameworks' />
+          <TechCards tag='core' title='UI library' />
+          <TechCards tag='styling' title='Styling' />
+          <TechCards tag='db' title='Databases and ORM' />
+          <TechCards tag='state' title='State Management' />
+          <TechCards tag='tool' title='Other Tools' />
+          <TechCards tag='env' title='Dev Environment' />
+          <TechCards tag='design' title='Design and Assets' />
         </div>
       </ContentWrapper>
     </section>

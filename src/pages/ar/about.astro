@@ -1,6 +1,7 @@
 ---
 import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
+import TechCards from '~/components/TechCards.astro';
 ---
 
 <Base pageTitle='About me'>
@@ -48,6 +49,17 @@ import Base from '~/layouts/Base.astro';
             >Next.js</strong
           >.
         </p>
+        <div class='space-y-4 pt-6'>
+          <TechCards tag='language' title='لغات البرمجة' />
+          <TechCards tag='framework' title='أطر العمل' />
+          <TechCards tag='core' title='مكتبة واجهة المستخدم' />
+          <TechCards tag='styling' title='التشكيل' />
+          <TechCards tag='db' title='قواعد البيانات' />
+          <TechCards tag='state' title='إدارة الحالة' />
+          <TechCards tag='tool' title='أدوات أخرى' />
+          <TechCards tag='env' title='بيئة التطوير' />
+          <TechCards tag='design' title='التصميم و الأصول' />
+        </div>
       </ContentWrapper>
     </section>
   </main>
