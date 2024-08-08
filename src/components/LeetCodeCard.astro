@@ -1,0 +1,26 @@
+---
+import { type LeetCodeStatus } from '~/lib/types';
+const res = await fetch('https://leetcode-stats-api.herokuapp.com/yassineoh');
+
+const data = (await res.json()) as LeetCodeStatus;
+---
+
+<aside
+  class='flex items-center justify-center rounded-lg bg-white/30 p-4 backdrop-blur-lg'
+>
+  <div class='flex items-center justify-start gap-x-4'>
+    Easy: {data.easySolved}
+  </div>
+  <div class='flex items-center justify-start gap-x-4'>
+    Medium: {data.mediumSolved}
+  </div>
+  <div class='flex items-center justify-start gap-x-4'>
+    Easy: {data.easySolved}
+  </div>
+  <div class='flex items-center justify-start gap-x-4'>
+    Total: {data.totalSolved}
+  </div>
+  <div class='flex items-center justify-start gap-x-4'>
+    Acceptance Rate: {data.acceptanceRate}
+  </div>
+</aside>

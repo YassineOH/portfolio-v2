@@ -1,0 +1,4 @@
+name: Linux / WSL
+icon: ubuntu
+tags: env
+link: https://learn.microsoft.com/en-us/windows/wsl/install
