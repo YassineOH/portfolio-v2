@@ -1,4 +1,4 @@
 name: PostgresSQL
 icon: postgres
-tags: db
+tag: db
 link: https://www.postgresql.org/

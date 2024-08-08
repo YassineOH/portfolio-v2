@@ -1,0 +1,40 @@
+---
+import { Icon } from 'astro-icon/components';
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+interface Props {
+  tag: CollectionEntry<'techs'>['data']['tag'];
+  title: string;
+}
+
+const { tag, title } = Astro.props;
+
+const techs = await getCollection('techs', (t) => {
+  return t.data.tag === tag;
+});
+---
+
+<div class='tech-card w-full space-y-2'>
+  <h4>{title}:</h4>
+  <ul class='flex items-start gap-4 ps-[0!important]'>
+    {
+      techs.map((t) => (
+        <li class='list-none ps-[0!important]'>
+          <a
+            class='flex h-full w-full items-center justify-start gap-x-1 rounded-full border border-text bg-transparent px-2 py-1 text-xs font-semibold text-text no-underline transition-all duration-200 hover:bg-gray-500/20 lg:gap-x-2 lg:px-4 lg:py-2 lg:text-sm'
+            aria-label={`link to ${t.data.name}`}
+            href={t.data.link}
+          >
+            <Icon
+              name={`techs/${t.data.icon}`}
+              class='aspect-square text-black dark:text-white'
+              height={20}
+              width={20}
+            />
+            <span>{t.data.name}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

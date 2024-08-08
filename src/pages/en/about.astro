@@ -4,6 +4,7 @@ import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
 
 import Heading from '~/components/Heading.astro';
+import TechCards from '~/components/TechCards.astro';
 ---
 
 <Base pageTitle='About me'>
@@ -47,6 +48,17 @@ import Heading from '~/components/Heading.astro';
           integrity is maintained across the entire stack, so you can focus on
           building features without worrying about inconsistencies.
         </p>
+        <p>
+          When it comes to the main frameworks I use, my choice depends on the
+          type of project. For static content-based sites, I prefer <strong>
+            Astro.js</strong
+          >, while for web applications, I typically go with <strong
+            >Next.js</strong
+          >
+        </p>
+        <div class='space-y-4'>
+          <TechCards tag='framework' title='Frameworks' />
+        </div>
       </ContentWrapper>
     </section>
   </main>

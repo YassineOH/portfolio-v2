@@ -4,7 +4,7 @@ import Base from '~/layouts/Base.astro';
 ---
 
 <Base pageTitle='About me'>
-  <main class='container mx-auto py-12 lg:py-24'>
+  <main class='container mx-auto py-12 pt-24 lg:py-24'>
     <ContentWrapper articleId='about-me'>
       <h1>نبذة عني.</h1>
       <p>
@@ -25,5 +25,30 @@ import Base from '~/layouts/Base.astro';
         أيضًا اهتمامات أخرى مثل قراءة <em>الأدب العربي</em> و لعب ألعاب الفيديو.
       </p>
     </ContentWrapper>
+    <section id='stack' class='py-12 lg:py-24'>
+      <ContentWrapper>
+        <h1>التقنيات التي أستخدمها</h1>
+        <h2>
+          باختصار ال <span class='bg-[#3178c6] text-white'>Type Safety</span>❤️.
+        </h2>
+        <p>
+          يوفر TypeScript تجربة تطوير استثنائية، مما يتيح تدفق عمل سلس بين تطوير
+          الواجهة الأمامية (client و الخادم (server). خاصة مع ظهور ال
+          <strong>React Server Components (RSC)</strong>، أصبحت الفجوة بين
+          الواجهة الأمامية (client) و الخادم (server) أكثر مرونة، مما جعل سلامة
+          الأنواع في TypeScript أكثر أهمية. فهي تضمن الحفاظ على سلامة البيانات
+          عبر جميع أجزاء المشروع، مما يتيح لك التركيز على بناء الميزات دون القلق
+          بشأن التناقضات.
+        </p>
+        <p>
+          أما فيما يتعلق في أطر العمل, فإن اختياري يعتمد على طبيعة المشروع.
+          بالنسبة للمشاريع التي تعتمد على المحتوى الثابت, أفضل العمل ب <strong>
+            Astro.js</strong
+          >, أما إذا تعلق الأمر بتطبيقات الويب, عادة ما أذهب لاستعمال <strong
+            >Next.js</strong
+          >.
+        </p>
+      </ContentWrapper>
+    </section>
   </main>
 </Base>

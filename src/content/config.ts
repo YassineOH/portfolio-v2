@@ -21,4 +21,4 @@ const techsCollection = defineCollection({
   }),
 });
 
-export const collections = { techsCollection };
+export const collections = { techs: techsCollection };
