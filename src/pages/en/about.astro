@@ -1,0 +1,17 @@
+---
+import TextWrapper from '~/components/TextWrapper.astro';
+import Base from '~/layouts/Base.astro';
+
+import { Content } from '~/md/en/about.md';
+---
+
+<Base pageTitle='About me'>
+  <main class='container mx-auto py-12 lg:py-24'>
+    <TextWrapper
+      articleId='about-me'
+      class='prose prose-sm animate-fade-up prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
+    >
+      <Content />
+    </TextWrapper>
+  </main>
+</Base>

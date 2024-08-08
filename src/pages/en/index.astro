@@ -1,13 +1,11 @@
 ---
 import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
-// import Button from '~/components/Button.astro';
 import Heading from '~/components/Heading.astro';
 import ContentWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
 import Form from '~/components/Form.astro';
-// const devJourny = await Astro.glob('../../content/en/journey.md');
-import { Content } from '~/content/en/journey.md';
+import { Content } from '~/md/en/journey.md';
 import { buttonVariants } from '~/lib/buttonVariants';
 import { Icon } from 'astro-icon/components';
 ---
@@ -49,9 +47,9 @@ import { Icon } from 'astro-icon/components';
       class='prose text-text prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <Content />
-      <p class='w-1/2'>
+      <p class='w-2/3 lg:w-1/2'>
         <a
-          href='/about'
+          href='/en/about'
           class:list={buttonVariants({
             variant: 'outline',
             className: 'flex w-auto items-center justify-center gap-x-4',

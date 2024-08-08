@@ -11,45 +11,42 @@ const t = useTranslation(lang);
 <footer
   class='w-full space-y-6 bg-primary pt-6 text-background dark:text-text lg:pt-12'
 >
-  <div class='mx-auto max-w-[800px] px-10'>
-    <Heading tag='h3'> <a href='/'> {t('footer.title')} </a></Heading>
-  </div>
   <div
-    class='mx-auto grid w-full max-w-[800px] grid-cols-1 gap-y-6 px-10 pb-3 lg:grid-cols-2'
+    class='mx-auto flex max-w-[720px] flex-col items-center justify-between gap-y-8 px-10 lg:flex-row'
   >
-    <div class='flex flex-col items-stretch justify-start'>
-      <p>
-        {t('footer.mail')}: <a href='mailto:someone@example.com'
-          >yassine.yas98@gmail.com</a
+    <Heading tag='h3'><a href='/'> {t('footer.title')} </a></Heading>
+    <ul class='flex items-center gap-x-4'>
+      <li class=''>
+        <a
+          target='_blank'
+          href='https://github.com/YassineOH'
+          aria-label='github link'
         >
-      </p>
-    </div>
-    <div class='flex flex-col items-stretch justify-center'>
-      <ul class='flex flex-col items-stretch'>
-        <li class='flex items-center justify-start gap-x-4'>
-          <Icon name='github' />
-
-          <a
-            target='_blank'
-            href='https://github.com/YassineOH'
-            aria-label='github link'>Github</a
-          >
-        </li>
-        <li class='flex items-center justify-start gap-x-4'>
-          <Icon name='linkedIn' />
-          <a
-            target='_blank'
-            href='https://www.linkedin.com/in/yassine-ofqir-hamma-52b5a7165/'
-            aria-label='linkedin link'>LinkedIn</a
-          >
-        </li>
-        <li class='flex items-center justify-start gap-x-4'>
-          <Icon name='x' />
-          <a href='' aria-label='x link'>x</a>
-        </li>
-      </ul>
-    </div>
+          <Icon name='github' width={24} height={24} />
+        </a>
+      </li>
+      <li class=''>
+        <a
+          target='_blank'
+          href='https://www.linkedin.com/in/yassine-ofqir-hamma-52b5a7165/'
+          aria-label='linkedin link'
+        >
+          <Icon name='linkedIn' width={24} height={24} />
+        </a>
+      </li>
+      <li class=''>
+        <a href='x.com' aria-label='x link'>
+          <Icon name='x' width={24} height={24} />
+        </a>
+      </li>
+      <li class=''>
+        <a href='mailto:yassine.yas98@gmail.com' aria-label='gmail'>
+          <Icon name='mail' width={24} height={24} />
+        </a>
+      </li>
+    </ul>
   </div>
+
   <p class='w-full py-1 text-center text-sm italic'>
     {
       lang === 'en'

@@ -24,7 +24,7 @@ export const ui = {
   },
   ar: {
     'nav.home': 'الرئيسية',
-    'nav.about': 'معلومات',
+    'nav.about': 'نبذة',
     'nav.showcases': 'مشاريع',
     'form.name': 'الاسم',
     'form.email': 'البريد  الإلكتروني',

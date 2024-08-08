@@ -26,7 +26,12 @@ export default {
 						},
 						strong: {
 							color: 'var(--primary)'
+						},
+						em: {
+							color: 'var(--accent)',
+							'font-style': 'italic'
 						}
+
 					}
 				}
 			}

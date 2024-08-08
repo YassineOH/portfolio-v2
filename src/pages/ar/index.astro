@@ -3,7 +3,7 @@ import AnimatedBg from '~/components/AnimatedBg.astro';
 import Astrolab from '~/components/Astrolab.astro';
 import ContentWrapper from '~/components/TextWrapper.astro';
 import Base from '~/layouts/Base.astro';
-import { Content } from '~/content/ar/journey.md';
+import { Content } from '~/md/ar/journey.md';
 import Heading from '~/components/Heading.astro';
 import Form from '~/components/Form.astro';
 import { buttonVariants } from '~/lib/buttonVariants';
@@ -42,12 +42,12 @@ import { Icon } from 'astro-icon/components';
   <section class='h-auto w-full py-6 lg:py-24' id='dev-journey-section'>
     <ContentWrapper
       articleId='journey'
-      class='prose prose-sm prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
+      class='prose prose-sm animate-fade-up prose-h1:prose-2xl dark:prose-invert lg:prose-base prose-h1:font-headings lg:prose-h1:text-3xl'
     >
       <Content />
-      <p class='w-1/2'>
+      <p class='w-2/3 lg:w-1/2'>
         <a
-          href='/about'
+          href='/ar/about'
           class:list={buttonVariants({
             variant: 'outline',
             className: 'flex w-auto items-center justify-center gap-x-4',
