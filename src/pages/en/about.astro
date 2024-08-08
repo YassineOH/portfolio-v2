@@ -4,6 +4,7 @@ import ContentWrapper from '~/components/ContentWrapper.astro';
 import Base from '~/layouts/Base.astro';
 
 import { Content } from '~/md/en/about.md';
+import Heading from '~/components/Heading.astro';
 ---
 
 <Base pageTitle='About me'>
@@ -14,7 +15,24 @@ import { Content } from '~/md/en/about.md';
     >
       <Content />
     </ContentWrapper>
-    <section id='stack' class='py-12 lg:py-24'></section>
-    <!-- <LeetCodeCard /> -->
+
+    <section id='stack' class='py-12 lg:py-24'>
+      <ContentWrapper class='space-y-4'>
+        <Heading tag='h2'> The stack I use </Heading>
+        <Heading tag='h3'>
+          It's all about <span class='bg-[#3178c6] text-white'>Type Safety</span
+          >❤️.
+        </Heading>
+        <p class='prose'>
+          TypeScript offers an exceptional developer experience, allowing for a
+          seamless workflow across both client and server development. With the
+          advent of <strong>React Server Components (RSC)</strong>, the
+          distinction between client and server has become more fluid, making
+          TypeScript's type safety even more valuable. It ensures that data
+          integrity is maintained across the entire stack, so you can focus on
+          building features without worrying about inconsistencies.
+        </p>
+      </ContentWrapper>
+    </section>
   </main>
 </Base>
