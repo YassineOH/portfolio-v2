@@ -2,11 +2,11 @@
 import disc from '~/assets/disc.png';
 import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
-const numberOfStars = new Array(300).fill(null);
+const numberOfStars = new Array(500).fill(null);
 ---
 
 <!-- stars in dark mode -->
-<div class='h-sre sticky top-0 w-screen'>
+<div class='h-sre sticky top-0 -z-10 w-screen'>
   <div
     id='stars'
     class='invisible absolute inset-0 -z-30 h-screen w-screen dark:visible'
@@ -36,21 +36,21 @@ const numberOfStars = new Array(300).fill(null);
     ]}
     dir='ltr'
   >
-    <div class='-translate-x-1/2'>
+    <div class='-z-10 -translate-x-1/2'>
       <Image
         format='avif'
         src={disc}
         alt='disc'
-        class='pointer-events-none aspect-auto animate-spin select-none opacity-10 animate-duration-[100000ms] animate-infinite animate-ease-linear lg:opacity-50'
+        class='pointer-events-none -z-10 aspect-auto animate-spin select-none opacity-10 animate-duration-[100000ms] animate-infinite animate-ease-linear lg:opacity-50'
         loading='eager'
       />
     </div>
-    <div class='translate-x-1/2'>
+    <div class='-z-10 translate-x-1/2'>
       <Image
         format='avif'
         src={disc}
         alt=''
-        class='pointer-events-none aspect-auto animate-spin select-none opacity-10 animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear lg:opacity-50'
+        class='pointer-events-none -z-10 aspect-auto animate-spin select-none opacity-10 animate-reverse animate-duration-[100000ms] animate-infinite animate-ease-linear lg:opacity-50'
         loading='eager'
       />
     </div>

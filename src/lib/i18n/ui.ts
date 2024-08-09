@@ -26,6 +26,10 @@ export const ui = {
     'leetcode.hard': 'Hard',
     'leetcode.rate': 'rate',
     'leetcode.title': 'LeetCode Summary',
+    'showcase.links': 'Links',
+    'showcase.built': 'Built using',
+    'showcase.demo': 'Live Demo',
+    'showcase.github': 'Github Repo',
   },
   ar: {
     'nav.home': 'الرئيسية',
@@ -47,6 +51,10 @@ export const ui = {
     'leetcode.hard': 'صعب',
     'leetcode.rate': 'القبول',
     'leetcode.title': 'ملخص LeetCode',
+    'showcase.links': 'روابط',
+    'showcase.built': 'تم التطوير بواسطة',
+    'showcase.demo': 'عرض مباشر',
+    'showcase.github': 'مستودع GitHub',
   },
 } as const;
 

@@ -1,0 +1,71 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntries } from 'astro:content';
+import TechButton from './TechButton.astro';
+import { buttonVariants } from '~/lib/buttonVariants';
+import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, useTranslation } from '~/lib/i18n';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
+
+const { project } = Astro.props;
+const techs = await getEntries(project.data.techs);
+---
+
+<article
+  class='bg-[#f6f4f3!important]/20 w-full space-y-6 rounded-lg border-2 border-primary p-4 backdrop-blur-2xl dark:bg-black/20'
+>
+  <h2>{project.data.title}</h2>
+  <p>{project.body}</p>
+  <div>
+    <h4 class='font-base'>{t('showcase.built')}:</h4>
+    <div class='flex flex-wrap gap-2'>
+      {
+        techs.map((t) => (
+          <TechButton
+            name={t.data.name}
+            icon={t.data.icon}
+            link={t.data.link}
+          />
+        ))
+      }
+    </div>
+  </div>
+  <div>
+    <h4 class='font-base'>{t('showcase.links')}:</h4>
+
+    <div class='flex flex-row gap-2'>
+      <a
+        href={project.data.demoLink}
+        class:list={buttonVariants({
+          variant: 'secondary',
+          className:
+            'flex items-center justify-start gap-x-2 text-sm lg:text-base',
+        })}
+        aria-label='live demo'
+        target='_blank'
+      >
+        <Icon name='live' />
+        <span>{t('showcase.demo')}</span>
+      </a>
+      <a
+        href={project.data.githubLinK}
+        class:list={buttonVariants({
+          variant: 'outline',
+          className:
+            'flex items-center justify-start gap-x-2 border-none bg-[#24292f!important] text-sm text-white hover:bg-[#24292f!important] hover:text-white hover:shadow-[#07080a] dark:hover:shadow-[#f3f3f3!important] lg:text-base',
+        })}
+        aria-label='github repo'
+        target='_blank'
+      >
+        <Icon name='github' />
+        <span>{t('showcase.github')}</span>
+      </a>
+    </div>
+  </div>
+</article>
