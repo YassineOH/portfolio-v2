@@ -9,7 +9,7 @@ export const ui = {
   en: {
     'nav.home': 'home',
     'nav.about': 'about',
-    'nav.showcases': 'showcases',
+    'nav.showcase': 'showcase',
     'form.name': 'name',
     'form.email': 'email',
     'form.message': 'message',
@@ -30,7 +30,7 @@ export const ui = {
   ar: {
     'nav.home': 'الرئيسية',
     'nav.about': 'نبذة',
-    'nav.showcases': 'مشاريع',
+    'nav.showcase': 'عرض',
     'form.name': 'الاسم',
     'form.email': 'البريد  الإلكتروني',
     'form.message': 'الرسالة',

@@ -9,7 +9,7 @@ type Link = { label: keyof UILang['ar' | 'en']; pathname: string };
 const links: Link[] = [
   { label: 'nav.home', pathname: '/' },
   { label: 'nav.about', pathname: '/about' },
-  { label: 'nav.showcases', pathname: '/showcases' },
+  { label: 'nav.showcase', pathname: '/showcase' },
 ];
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslation(lang);
