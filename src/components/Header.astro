@@ -20,37 +20,41 @@ const { pathname } = Astro.url;
   class='sticky left-0 top-0 z-50 flex w-screen items-center justify-center lg:h-auto lg:translate-y-[0]'
 >
   <ButtonMenu />
-  <ul
+  <nav
     id='menu'
     data-state='close'
     class='absolute bottom-0 flex h-screen w-full flex-col items-center justify-center gap-x-14 gap-y-8 bg-[#f6f4f3]/30 bg-opacity-100 py-4 backdrop-blur-xl dark:bg-[#0f1624]/30 lg:relative lg:top-0 lg:h-auto lg:flex-row lg:bg-opacity-40'
   >
-    {
-      links.map((l) => (
-        <li>
-          <a
-            href={`/${lang}${l.pathname}`}
-            class:list={[
-              'px-4 py-2 text-base font-normal capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm lg:font-semibold',
-              {
-                'rounded-full bg-primary font-bold text-background opacity-[1]':
-                  pathname === `/${lang}${l.pathname}`,
-              },
-            ]}
-          >
-            {t(l.label)}{' '}
-          </a>
-        </li>
-      ))
-    }
-    <li class='h-1 w-48 rounded-full bg-secondary lg:h-6 lg:w-1'></li>
-    <ul class='flex items-center justify-center gap-x-6'>
-      <li>
-        <ToggleTheme />
-      </li>
-      <li>
-        <ChangeLang />
-      </li>
+    <ul
+      class='flex flex-col items-center justify-center gap-x-14 gap-y-8 lg:flex-row'
+    >
+      {
+        links.map((l) => (
+          <li>
+            <a
+              href={`/${lang}${l.pathname}`}
+              class:list={[
+                'px-4 py-2 text-base font-normal capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm lg:font-semibold',
+                {
+                  'rounded-full bg-primary font-bold text-background opacity-[1]':
+                    pathname === `/${lang}${l.pathname}`,
+                },
+              ]}
+            >
+              {t(l.label)}{' '}
+            </a>
+          </li>
+        ))
+      }
     </ul>
-  </ul>
+    <div class='h-1 w-48 rounded-full bg-secondary lg:h-6 lg:w-1'></div>
+    <div class='flex items-center justify-center gap-x-6'>
+      <div>
+        <ToggleTheme />
+      </div>
+      <div>
+        <ChangeLang />
+      </div>
+    </div>
+  </nav>
 </header>
