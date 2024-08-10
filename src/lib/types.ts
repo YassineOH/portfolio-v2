@@ -1,7 +1,7 @@
 export interface LeetCodeStatus {
-  status: string;
-  message: string;
   totalSolved: number;
+  totalSubmissions: unknown;
+  acceptanceRate: number;
   totalQuestions: number;
   easySolved: number;
   totalEasy: number;
@@ -9,8 +9,10 @@ export interface LeetCodeStatus {
   totalMedium: number;
   hardSolved: number;
   totalHard: number;
-  acceptanceRate: number;
   ranking: number;
-  contributionPoints: number;
+  contributionPoint: number;
   reputation: number;
+  submissionCalendar: unknown;
+  recentSubmissions: unknown[];
+  matchedUserStats: unknown;
 }

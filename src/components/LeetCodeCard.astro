@@ -2,9 +2,17 @@
 import { Icon } from 'astro-icon/components';
 import { getLangFromUrl, useTranslation } from '~/lib/i18n';
 import { type LeetCodeStatus } from '~/lib/types';
-const res = await fetch('https://leetcode-stats-api.herokuapp.com/yassineoh');
 
-const data = (await res.json()) as LeetCodeStatus;
+let data: LeetCodeStatus | undefined;
+try {
+  const res = await fetch(
+    'https://leetcode-api-faisalshohag.vercel.app/yassineoh'
+  );
+
+  data = (await res.json()) as LeetCodeStatus;
+} catch (error) {
+  data = undefined;
+}
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslation(lang);
 ---
@@ -25,28 +33,28 @@ const t = useTranslation(lang);
       class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold text-[#00b4b4]'
     >
       <span>{t('leetcode.easy')}</span>
-      {data.easySolved}
+      {data?.easySolved || 80}
     </div>
     <div
       class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold text-[#ffae00]'
     >
       <span>{t('leetcode.medium')}</span>
 
-      {data.mediumSolved}
+      {data?.mediumSolved || 59}
     </div>
     <div
       class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold text-[#f60000]'
     >
       <span>{t('leetcode.hard')}</span>
 
-      {data.hardSolved}
+      {data?.hardSolved || 9}
     </div>
 
     <div
       class='flex flex-col items-center justify-start gap-y-1 text-sm font-bold'
     >
       <span>{t('leetcode.rate')}</span>
-      {data.acceptanceRate}%
+      {data?.acceptanceRate || 52.12}%
     </div>
   </div>
 </aside>
