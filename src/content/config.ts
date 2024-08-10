@@ -24,7 +24,7 @@ const techsCollection = defineCollection({
 
 const projectsCollections = defineCollection({
   type: 'content',
-  schema: ({ image }) =>
+  schema: ({}) =>
     z.object({
       title: z.string(),
       githubLinK: z.string().url().optional(),
