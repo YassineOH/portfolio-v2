@@ -30,11 +30,12 @@ export const ui = {
     'showcase.built': 'Built using',
     'showcase.demo': 'Live Demo',
     'showcase.github': 'Github Repo',
+    'showcase.screens': 'See screenshots',
   },
   ar: {
     'nav.home': 'الرئيسية',
     'nav.about': 'نبذة',
-    'nav.showcase': 'عرض',
+    'nav.showcase': 'معرض',
     'form.name': 'الاسم',
     'form.email': 'البريد  الإلكتروني',
     'form.message': 'الرسالة',
@@ -55,6 +56,7 @@ export const ui = {
     'showcase.built': 'تم التطوير بواسطة',
     'showcase.demo': 'عرض مباشر',
     'showcase.github': 'مستودع GitHub',
+    'showcase.screens': 'أنطر لقطات الشاشة',
   },
 } as const;
 

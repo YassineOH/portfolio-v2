@@ -10,10 +10,5 @@ techs:
     - authjs
     - react-query
     - react-hook-form
-images:
-    - ../auth-workflow/img1.png
-    - ../auth-workflow/img2.png
-    - ../auth-workflow/img2.png
-    - ../auth-workflow/img4.png
 ---
 هذا التطبيق يُظهر سير عمل المصادقة باستخدام Auth.js V5 مع Next.js، حيث يغطي العملية الكاملة من المصادقة إلى تسجيل المستخدمين في قاعدة البيانات.

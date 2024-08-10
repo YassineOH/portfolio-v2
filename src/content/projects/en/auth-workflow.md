@@ -10,10 +10,5 @@ techs:
     - authjs
     - react-query
     - react-hook-form
-images:
-    - ../auth-workflow/img1.png
-    - ../auth-workflow/img2.png
-    - ../auth-workflow/img2.png
-    - ../auth-workflow/img4.png
 ---
 This app demonstrates the authentication workflow using Auth.js V5 with Next.js, covering the entire process from Authentication to Registering users into a database.

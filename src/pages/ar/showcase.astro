@@ -3,17 +3,24 @@ import Base from '~/layouts/Base.astro';
 import ContentWrapper from '~/components/ContentWrapper.astro';
 import { getCollection } from 'astro:content';
 import ProjectCard from '~/components/ProjectCard.astro';
+import { getLangFromUrl } from '~/lib/i18n';
 
-const projects = await getCollection('projects');
+const lang = getLangFromUrl(Astro.url);
+const projects = await getCollection('projects', (p) =>
+  p.slug.startsWith(lang)
+);
 ---
 
 <Base pageTitle='معرض'>
   <main class='container mx-auto py-12 lg:py-24'>
     <ContentWrapper>
       <h1 class='text-center'>معرض الأعمال</h1>
+      <p class='text-center'>
+        هذه هي مشاريعي المفضلة الأخيرة التي أستعرض فيها أفضل مهاراتي في تطوير
+        الويب.
+      </p>
       <div class='space-y-8'>
-        <ProjectCard project={projects[0]} />
-        <ProjectCard project={projects[0]} />
+        {projects.map((prj) => <ProjectCard project={prj} />)}
       </div>
     </ContentWrapper>
   </main>
