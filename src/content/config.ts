@@ -17,6 +17,7 @@ const techsCollection = defineCollection({
       'env',
       'design',
       'state',
+      'infra',
     ]),
   }),
 });
