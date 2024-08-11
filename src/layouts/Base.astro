@@ -23,10 +23,12 @@ const lang = getLangFromUrl(Astro.url);
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/logo.svg' />
     <meta name='viewport' content='width=device-width' />
-    <meta name='author' content='YASSINE OFQIR-HAMMA' />
+    <meta name='author' content='YASSINE OFQIR-HAMMA, ياسين أفقير حما' />
     <meta
       name='description'
-      content="Hi, I'm yassine ofqir-hamma a web developer, welcom to my portfolio."
+      content={lang === 'en'
+        ? "Hi, I'm yassine ofqir-hamma a web developer, welcom to my portfolio."
+        : 'مرحبا, أنا ياسين أفقير حما مبرمج ويب, مبرحبا بك في ملفي الشخصي'}
     />
     <meta name='generator' content={Astro.generator} />
     <title>{pageTitle}</title>
