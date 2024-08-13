@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl, useTranslation } from '~/lib/i18n';
+import { getLangFromUrl, useTranslation, useTranslatedPath } from '~/lib/i18n';
 import { type UILang } from '~/lib/i18n/ui';
 import ToggleTheme from './ToggleTheme.astro';
 import ChangeLang from './ChangeLang.astro';
@@ -14,6 +14,7 @@ const links: Link[] = [
 ];
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslation(lang);
+const translatePath = useTranslatedPath(lang);
 const { pathname } = Astro.url;
 ---
 
@@ -44,12 +45,12 @@ const { pathname } = Astro.url;
         links.map((l) => (
           <li>
             <a
-              href={`/${lang}${l.pathname}`}
+              href={translatePath(l.pathname)}
               class:list={[
                 'px-4 py-2 text-base font-normal capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm lg:font-semibold',
                 {
                   'rounded-full bg-primary font-bold text-background opacity-[1]':
-                    pathname === `/${lang}${l.pathname}`,
+                    pathname.endsWith(l.pathname),
                 },
               ]}
             >

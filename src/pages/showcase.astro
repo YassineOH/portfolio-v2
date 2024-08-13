@@ -9,6 +9,8 @@ const lang = getLangFromUrl(Astro.url);
 const projects = await getCollection('projects', (p) =>
   p.slug.startsWith(lang)
 );
+
+projects.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Base pageTitle='showcases'>

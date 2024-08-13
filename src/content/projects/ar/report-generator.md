@@ -3,6 +3,7 @@ title: مولد تقارير المحطات الشمسية
 githubLinK: https://github.com/YassineOH/eone-report-solar
 demoLink: https://eone-report-solar.vercel.app/en
 images: https://www.linkedin.com/posts/yassine-ofqir-hamma-52b5a7165_solar-nextjs-nextjs14-activity-7168288298958856192-ba6G?utm_source=share&utm_medium=member_desktop
+order: 1
 techs: 
     - nextjs
     - shadcn

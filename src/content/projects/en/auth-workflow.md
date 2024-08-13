@@ -2,6 +2,7 @@
 title: OAuth workflow with Next.js
 githubLinK: https://github.com/YassineOH/auth-workflow-next
 demoLink: https://auth-workflow-next.vercel.app/
+order: 3
 techs: 
     - nextjs
     - drizzle

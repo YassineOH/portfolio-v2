@@ -3,6 +3,8 @@ export const languages = {
   en: 'English',
 };
 
+export const showDefaultLang = false;
+
 export const defaultLanguage = 'en';
 
 export const ui = {
@@ -31,6 +33,8 @@ export const ui = {
     'showcase.demo': 'Live Demo',
     'showcase.github': 'Github Repo',
     'showcase.screens': 'See screenshots',
+    '404.title': "404!! there's no page here",
+    '404.button': 'Go Back',
   },
   ar: {
     'nav.home': 'الرئيسية',
@@ -57,6 +61,8 @@ export const ui = {
     'showcase.demo': 'عرض مباشر',
     'showcase.github': 'مستودع GitHub',
     'showcase.screens': 'أنطر لقطات الشاشة',
+    '404.title': '404!! لا توجد صفحة هنا',
+    '404.button': 'الرجوع للرئيسية',
   },
 } as const;
 

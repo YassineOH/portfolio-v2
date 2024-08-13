@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import Base from '~/layouts/Base.astro';
+import { buttonVariants } from '~/lib/buttonVariants';
+import { getLangFromUrl, useTranslation } from '~/lib/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslation(lang);
+---
+
+<Base pageTitle='404'>
+  <main
+    class='flex h-screen w-screen flex-col items-center justify-center gap-y-12'
+  >
+    <Image
+      src='/logo.svg'
+      class='block'
+      width={200}
+      height={200}
+      alt='logo'
+      format='avif'
+      loading='eager'
+    />
+    <div class='prose flex flex-col items-center gap-y-4 dark:prose-invert'>
+      <h2 class=''>{t('404.title')}</h2>
+      <a href={`/${lang}/`} class:list={buttonVariants({})}>{t('404.button')}</a
+      >
+    </div>
+  </main>
+</Base>

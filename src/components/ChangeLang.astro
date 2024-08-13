@@ -4,7 +4,10 @@ import { getLangFromUrl } from '~/lib/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const { pathname } = Astro.url;
-const [, path] = pathname.split(lang);
+let [, path] = pathname.split(lang);
+if (path === undefined) {
+  path = pathname;
+}
 ---
 
 <div class='relative'>
@@ -31,7 +34,7 @@ const [, path] = pathname.split(lang);
     </li>
     <li>
       <a
-        href={'/en' + path}
+        href={path}
         class='flex items-center justify-center gap-x-2 px-4 py-2 font-semibold hover:bg-secondary hover:text-white'
       >
         <Icon name='us' />

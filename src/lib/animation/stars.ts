@@ -44,7 +44,7 @@ export const animateStars = () => {
       y: randY - 1 * Math.random(),
       delay: Math.random() * 1,
       ease: 'power2.out',
-      duration: 0.5,
+      duration: 1.5,
     });
   });
 };
