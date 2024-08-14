@@ -9,17 +9,16 @@ import './astrolab';
 import './content-animation';
 import './form-submission';
 
-const lenis = new Lenis();
-
-function raf(time: number) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
-
 document.addEventListener('astro:after-swap', () => {
+  const lenis = new Lenis();
+
+  function raf(time: number) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
   initializeTheme();
   animateStars();
-  // };
 });
