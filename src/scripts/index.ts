@@ -22,3 +22,6 @@ document.addEventListener('astro:after-swap', () => {
   initializeTheme();
   animateStars();
 });
+
+initializeTheme();
+animateStars();
