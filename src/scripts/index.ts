@@ -18,7 +18,7 @@ function raf(time: number) {
 
 requestAnimationFrame(raf);
 
-document.addEventListener('astro:page-load', () => {
+document.addEventListener('astro:after-swap', () => {
   initializeTheme();
   animateStars();
   // };

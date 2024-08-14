@@ -13,7 +13,10 @@ import { Icon } from 'astro-icon/components';
     id='hero'
     class='container mx-auto flex h-screen w-full flex-col items-center justify-center gap-y-20 pb-10 lg:h-[calc(100vh-100px)] lg:gap-y-24 lg:pb-0'
   >
-    <div class='flex flex-col items-center justify-center gap-y-6'>
+    <div
+      class='flex flex-col items-center justify-center gap-y-6'
+      transition:animate='fade'
+    >
       <Heading tag='h1' class='text-center uppercase'>
         yassine <br class='block lg:hidden' /> ofqir-hamma
       </Heading>
