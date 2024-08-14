@@ -2,6 +2,8 @@
 interface Props {
   pageTitle: string;
 }
+import { ViewTransitions } from 'astro:transitions';
+
 import { getLangFromUrl } from '~/lib/i18n';
 import Header from '~/components/Header.astro';
 import '../styles/index.css';
@@ -32,14 +34,14 @@ const lang = getLangFromUrl(Astro.url);
     />
     <meta name='generator' content={Astro.generator} />
     <title>{pageTitle}</title>
+    <ViewTransitions />
   </head>
   <body class='relative overflow-x-hidden bg-background font-base text-text'>
     <AnimatedBg />
     <Header />
     <slot />
     <Footer />
-  </body>
-  <script>
+  </body><script>
     import '~/scripts/index';
   </script>
 </html>

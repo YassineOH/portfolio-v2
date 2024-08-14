@@ -1,7 +1,7 @@
 import { useTranslation } from '~/lib/i18n';
 
 document.addEventListener(
-  'DOMContentLoaded',
+  'astro:page-load',
   () => {
     const form = document.getElementById('form') as HTMLFormElement;
     const result = document.getElementById('result')!;

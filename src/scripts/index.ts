@@ -18,7 +18,8 @@ function raf(time: number) {
 
 requestAnimationFrame(raf);
 
-// window.onload = () => {
-initializeTheme();
-animateStars();
-// };
+document.addEventListener('astro:page-load', () => {
+  initializeTheme();
+  animateStars();
+  // };
+});
