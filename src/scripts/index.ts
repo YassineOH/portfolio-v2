@@ -8,6 +8,7 @@ import './typing';
 import './astrolab';
 import './content-animation';
 import './form-submission';
+import './links-highlights';
 
 document.addEventListener('astro:after-swap', () => {
   const lenis = new Lenis();

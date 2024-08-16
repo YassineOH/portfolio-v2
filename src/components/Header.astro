@@ -48,14 +48,10 @@ const { pathname } = Astro.url;
             <a
               href={translatePath(l.pathname)}
               class:list={[
-                'px-4 py-2 text-base font-normal capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm lg:font-semibold',
-                {
-                  'rounded-full bg-primary font-bold text-background opacity-[1]':
-                    pathname.endsWith(l.pathname),
-                },
+                'rounded-full px-4 py-2 text-base font-normal capitalize opacity-50 transition-all duration-300 hover:opacity-100 lg:text-sm lg:font-semibold',
               ]}
             >
-              {t(l.label)}{' '}
+              {t(l.label)}
             </a>
           </li>
         ))
