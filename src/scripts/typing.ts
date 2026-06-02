@@ -1,21 +1,21 @@
 import { typingTextAnimation } from '~/lib/animation/typing';
 
 const sentences_en = [
-  'web developer',
-  'frontend developer',
+  'fullstack developer',
   'Next.js developer',
+  'NestJS developer',
   'React.js developer',
+  'cloud engineer',
   'Astro.js developer',
-  'solar engineer',
 ];
 
 const sentences_ar = [
-  'مبرمج ويب',
-  'مبرمج واجهة المستخدم',
-  'مبرمج React.js',
-  'مبرمج Next.js',
-  'مبرمج Astro.js',
-  'مهندس طاقة شمسية',
+  'مطور متكامل',
+  'مطور Next.js',
+  'مطور NestJS',
+  'مطور React.js',
+  'مهندس سحابي',
+  'مطور Astro.js',
 ];
 
 document.addEventListener('astro:page-load', () => {
